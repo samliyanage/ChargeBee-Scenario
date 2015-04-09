@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy xmlns="http://ws.apache.org/ns/synapse" name="chargebee_updateSubscription" transports="https,http" statistics="disable" trace="disable" startOnLoad="true">
+	<target>
+		<inSequence>
+								<property name="planId" expression="json-eval($.planId)" />
+											<property name="planQuantity" expression="json-eval($.planQuantity)" />
+											<property name="startDate" expression="json-eval($.startDate)" />
+											<property name="trialEndDate" expression="json-eval($.trialEndDate)" />
+											<property name="billingCycles" expression="json-eval($.billingCycles)" />
+											<property name="replaceAddonList" expression="json-eval($.replaceAddonList)" />
+											<property name="couponId" expression="json-eval($.couponId)" />
+											<property name="prorate" expression="json-eval($.prorate)" />
+											<property name="endOfTerm" expression="json-eval($.endOfTerm)" />
+											<property name="cardGateway" expression="json-eval($.cardGateway)" />
+											<property name="cardTmpToken" expression="json-eval($.cardTmpToken)" />
+											<property name="cardFirstName" expression="json-eval($.cardFirstName)" />
+											<property name="cardLastName" expression="json-eval($.cardLastName)" />
+											<property name="cardNumber" expression="json-eval($.cardNumber)" />
+											<property name="cardExpiryMonth" expression="json-eval($.cardExpiryMonth)" />
+											<property name="cardExpiryYear" expression="json-eval($.cardExpiryYear)" />
+											<property name="cardCVV" expression="json-eval($.cardCVV)" />
+											<property name="cardBillingAddress1" expression="json-eval($.cardBillingAddress1)" />
+											<property name="cardBillingAddress2" expression="json-eval($.cardBillingAddress2)" />
+											<property name="cardBillingCity" expression="json-eval($.cardBillingCity)" />
+											<property name="cardBillingStateCode" expression="json-eval($.cardBillingStateCode)" />
+											<property name="cardBillingState" expression="json-eval($.cardBillingState)" />
+											<property name="cardBillingZip" expression="json-eval($.cardBillingZip)" />
+											<property name="cardBillingCountry" expression="json-eval($.cardBillingCountry)" />
+											<property name="cardIpAddress" expression="json-eval($.cardIpAddress)" />
+											<property name="billingAddressFirstName" expression="json-eval($.billingAddressFirstName)" />
+											<property name="billingAddressLastName" expression="json-eval($.billingAddressLastName)" />
+											<property name="billingAddressEmail" expression="json-eval($.billingAddressEmail)" />
+											<property name="billingAddressCompanyName" expression="json-eval($.billingAddressCompanyName)" />
+											<property name="billingAddressPhoneNumber" expression="json-eval($.billingAddressPhoneNumber)" />
+											<property name="billingAddressLine1" expression="json-eval($.billingAddressLine1)" />
+											<property name="billingAddressLine2" expression="json-eval($.billingAddressLine2)" />
+											<property name="billingAddressLine3" expression="json-eval($.billingAddressLine3)" />
+											<property name="billingAddressCity" expression="json-eval($.billingAddressCity)" />
+											<property name="billingAddressStateCode" expression="json-eval($.billingAddressStateCode)" />
+											<property name="billingAddressState" expression="json-eval($.billingAddressState)" />
+											<property name="billingAddressZip" expression="json-eval($.billingAddressZip)" />
+											<property name="billingAddressCountry" expression="json-eval($.billingAddressCountry)" />
+											<property name="shippingAddressFirstName" expression="json-eval($.shippingAddressFirstName)" />
+											<property name="shippingAddressLastName" expression="json-eval($.shippingAddressLastName)" />
+											<property name="shippingAddressEmail" expression="json-eval($.shippingAddressEmail)" />
+											<property name="shippingAddressCompanyName" expression="json-eval($.shippingAddressCompanyName)" />
+											<property name="shippingAddressPhoneNumber" expression="json-eval($.shippingAddressPhoneNumber)" />
+											<property name="shippingAddressLine1" expression="json-eval($.shippingAddressLine1)" />
+											<property name="shippingAddressLine2" expression="json-eval($.shippingAddressLine2)" />
+											<property name="shippingAddressLine3" expression="json-eval($.shippingAddressLine3)" />
+											<property name="shippingAddressCity" expression="json-eval($.shippingAddressCity)" />
+											<property name="shippingAddressStateCode" expression="json-eval($.shippingAddressStateCode)" />
+											<property name="shippingAddressState" expression="json-eval($.shippingAddressState)" />
+											<property name="shippingAddressZip" expression="json-eval($.shippingAddressZip)" />
+											<property name="shippingAddressCountry" expression="json-eval($.shippingAddressCountry)" />
+											<property name="customerVatNumber" expression="json-eval($.customerVatNumber)" />
+											<property name="addonIds" expression="json-eval($.addonIds)" />
+											<property name="addonsQuantity" expression="json-eval($.addonsQuantity)" />
+								<chargebee.updateSubscription>
+							<planId>{$ctx:planId}</planId>
+							<planQuantity>{$ctx:planQuantity}</planQuantity>
+							<startDate>{$ctx:startDate}</startDate>
+							<trialEndDate>{$ctx:trialEndDate}</trialEndDate>
+							<billingCycles>{$ctx:billingCycles}</billingCycles>
+							<replaceAddonList>{$ctx:replaceAddonList}</replaceAddonList>
+							<couponId>{$ctx:couponId}</couponId>
+							<prorate>{$ctx:prorate}</prorate>
+							<endOfTerm>{$ctx:endOfTerm}</endOfTerm>
+							<cardGateway>{$ctx:cardGateway}</cardGateway>
+							<cardTmpToken>{$ctx:cardTmpToken}</cardTmpToken>
+							<cardFirstName>{$ctx:cardFirstName}</cardFirstName>
+							<cardLastName>{$ctx:cardLastName}</cardLastName>
+							<cardNumber>{$ctx:cardNumber}</cardNumber>
+							<cardExpiryMonth>{$ctx:cardExpiryMonth}</cardExpiryMonth>
+							<cardExpiryYear>{$ctx:cardExpiryYear}</cardExpiryYear>
+							<cardCVV>{$ctx:cardCVV}</cardCVV>
+							<cardBillingAddress1>{$ctx:cardBillingAddress1}</cardBillingAddress1>
+							<cardBillingAddress2>{$ctx:cardBillingAddress2}</cardBillingAddress2>
+							<cardBillingCity>{$ctx:cardBillingCity}</cardBillingCity>
+							<cardBillingStateCode>{$ctx:cardBillingStateCode}</cardBillingStateCode>
+							<cardBillingState>{$ctx:cardBillingState}</cardBillingState>
+							<cardBillingZip>{$ctx:cardBillingZip}</cardBillingZip>
+							<cardBillingCountry>{$ctx:cardBillingCountry}</cardBillingCountry>
+							<cardIpAddress>{$ctx:cardIpAddress}</cardIpAddress>
+							<billingAddressFirstName>{$ctx:billingAddressFirstName}</billingAddressFirstName>
+							<billingAddressLastName>{$ctx:billingAddressLastName}</billingAddressLastName>
+							<billingAddressEmail>{$ctx:billingAddressEmail}</billingAddressEmail>
+							<billingAddressCompanyName>{$ctx:billingAddressCompanyName}</billingAddressCompanyName>
+							<billingAddressPhoneNumber>{$ctx:billingAddressPhoneNumber}</billingAddressPhoneNumber>
+							<billingAddressLine1>{$ctx:billingAddressLine1}</billingAddressLine1>
+							<billingAddressLine2>{$ctx:billingAddressLine2}</billingAddressLine2>
+							<billingAddressLine3>{$ctx:billingAddressLine3}</billingAddressLine3>
+							<billingAddressCity>{$ctx:billingAddressCity}</billingAddressCity>
+							<billingAddressStateCode>{$ctx:billingAddressStateCode}</billingAddressStateCode>
+							<billingAddressState>{$ctx:billingAddressState}</billingAddressState>
+							<billingAddressZip>{$ctx:billingAddressZip}</billingAddressZip>
+							<billingAddressCountry>{$ctx:billingAddressCountry}</billingAddressCountry>
+							<shippingAddressFirstName>{$ctx:shippingAddressFirstName}</shippingAddressFirstName>
+							<shippingAddressLastName>{$ctx:shippingAddressLastName}</shippingAddressLastName>
+							<shippingAddressEmail>{$ctx:shippingAddressEmail}</shippingAddressEmail>
+							<shippingAddressCompanyName>{$ctx:shippingAddressCompanyName}</shippingAddressCompanyName>
+							<shippingAddressPhoneNumber>{$ctx:shippingAddressPhoneNumber}</shippingAddressPhoneNumber>
+							<shippingAddressLine1>{$ctx:shippingAddressLine1}</shippingAddressLine1>
+							<shippingAddressLine2>{$ctx:shippingAddressLine2}</shippingAddressLine2>
+							<shippingAddressLine3>{$ctx:shippingAddressLine3}</shippingAddressLine3>
+							<shippingAddressCity>{$ctx:shippingAddressCity}</shippingAddressCity>
+							<shippingAddressStateCode>{$ctx:shippingAddressStateCode}</shippingAddressStateCode>
+							<shippingAddressState>{$ctx:shippingAddressState}</shippingAddressState>
+							<shippingAddressZip>{$ctx:shippingAddressZip}</shippingAddressZip>
+							<shippingAddressCountry>{$ctx:shippingAddressCountry}</shippingAddressCountry>
+							<customerVatNumber>{$ctx:customerVatNumber}</customerVatNumber>
+							<addonIds>{$ctx:addonIds}</addonIds>
+							<addonsQuantity>{$ctx:addonsQuantity}</addonsQuantity>
+						</chargebee.updateSubscription>
+			<respond />
+		</inSequence>
+		<outSequence>
+			<log />
+			<send />
+		</outSequence>
+	</target>
+	<description />
+</proxy>  

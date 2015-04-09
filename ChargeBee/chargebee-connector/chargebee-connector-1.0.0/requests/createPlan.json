@@ -1,0 +1,18 @@
+{
+	"planId" : "",
+	"planName" : "",
+	"invoiceName" : "",
+	"description" : "",
+	"trialPeriod" : "",
+	"trialPeriodUnit" : "",
+	"period" : "",
+	"periodUnit" : "",
+	"setupCost" : "",
+	"price" : "",
+	"billingCycles" : "",
+	"chargeModel" : "",
+	"freeQuantity" : "",
+	"downgradePenalty" : "",
+	"redirectUrl" : "",
+	"enabledInHostedPages" : "",
+}

@@ -1,0 +1,10 @@
+{
+   "apiUrl" : "https://virasoft.pagerduty.com",
+   "apiToken" : "uAB6yAsCkWxPqdCbuJqd",
+   "name" : "Dan Vira2",
+   "email" : "dan.vira2@gmail.com",
+   "role" : "limited_user",
+   "jobTitle" : "Engineer",
+   "timeZone" : "Cairo",
+   "requesterId" : "PD83TQS"
+}

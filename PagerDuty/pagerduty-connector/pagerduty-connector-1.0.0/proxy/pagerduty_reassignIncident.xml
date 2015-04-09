@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy xmlns="http://ws.apache.org/ns/synapse"
+       name="pagerduty_reassignIncident"
+       transports="https,http"
+       statistics="disable"
+       trace="disable"
+       startOnLoad="true">
+   <target>
+      <inSequence onError="faultHandlerSeq">
+         <property name="apiUrl" expression="json-eval($.apiUrl)"/>
+         <property name="apiToken" expression="json-eval($.apiToken)"/>
+         <property name="incidentId" expression="json-eval($.incidentId)"/>
+         <property name="requesterId" expression="json-eval($.requesterId)"/>
+         <property name="assignedToUser" expression="json-eval($.assignedToUser)"/>
+         <property name="escalationPolicy" expression="json-eval($.escalationPolicy)"/>
+         <property name="escalationLevel" expression="json-eval($.escalationLevel)"/>
+         <pagerduty.init>
+            <apiUrl>{$ctx:apiUrl}</apiUrl>
+            <apiToken>{$ctx:apiToken}</apiToken>
+         </pagerduty.init>
+         <pagerduty.reassignIncident>
+            <incidentId>{$ctx:incidentId}</incidentId>
+            <requesterId>{$ctx:requesterId}</requesterId>
+            <assignedToUser>{$ctx:assignedToUser}</assignedToUser>
+            <escalationPolicy>{$ctx:escalationPolicy}</escalationPolicy>
+            <escalationLevel>{$ctx:escalationLevel}</escalationLevel>
+         </pagerduty.reassignIncident>
+         <respond/>
+      </inSequence>
+      <outSequence>
+         <log/>
+         <send/>
+      </outSequence>
+   </target>
+   <description/>
+</proxy>
+                                

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy xmlns="http://ws.apache.org/ns/synapse" name="chargebee_listCustomers" transports="https,http" statistics="disable" trace="disable" startOnLoad="true">
+	<target>
+		<inSequence>
+								<property name="limit" expression="json-eval($.limit)" />
+											<property name="offset" expression="json-eval($.offset)" />
+								<chargebee.listCustomers>
+							<limit>{$ctx:limit}</limit>
+							<offset>{$ctx:offset}</offset>
+						</chargebee.listCustomers>
+			<respond />
+		</inSequence>
+		<outSequence>
+			<log />
+			<send />
+		</outSequence>
+	</target>
+	<description />
+</proxy>  

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="chargebee_subscriptions" type="synapse/template">
+  <subComponents>
+    	<component name="createSubscriptionForCustomer">
+      <file>createSubscriptionForCustomer.xml</file>
+      <description>Creates a new subscription for an existing customer</description>
+    </component>
+    	<component name="listSubscriptions">
+      <file>listSubscriptions.xml</file>
+      <description>List all subscriptions</description>
+    </component>
+    	<component name="getSubscription">
+      <file>getSubscription.xml</file>
+      <description>Retrieve single subscription for a given subscriptionId</description>
+    </component>
+    	<component name="updateSubscription">
+      <file>updateSubscription.xml</file>
+      <description>Update an existing subscription</description>
+    </component>
+    	<component name="cancelSubscription">
+      <file>cancelSubscription.xml</file>
+      <description>Cancel a subscription</description>
+    </component>
+    </subComponents>
+</component>

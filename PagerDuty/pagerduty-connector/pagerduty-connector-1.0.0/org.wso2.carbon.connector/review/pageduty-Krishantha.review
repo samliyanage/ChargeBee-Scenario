@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Review id="pageduty">
+  <ReviewIssue id="I69B2E6L">
+    <ReviewIssueMeta>
+      <CreationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2015-02-17 :: 18:37:10:797 IST</CreationDate>
+      <LastModificationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2015-02-23 :: 10:46:11:172 IST</LastModificationDate>
+    </ReviewIssueMeta>
+    <ReviewerId>Krishantha</ReviewerId>
+    <AssignedTo>Krishantha</AssignedTo>
+    <File line="63">src/main/resources/pagerduty_contactMethod/createContactMethod.xml</File>
+    <Type>item.label.unset</Type>
+    <Severity>item.label.unset</Severity>
+    <Summary></Summary>
+    <Description>remove empty line on all methods</Description>
+    <Annotation></Annotation>
+    <Revision>All empty lines in the script mediators were removed.</Revision>
+    <Resolution>item.label.unset</Resolution>
+    <Status>item.status.label.closed</Status>
+  </ReviewIssue>
+  <ReviewIssue id="I69B5S64">
+    <ReviewIssueMeta>
+      <CreationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2015-02-17 :: 18:39:48:892 IST</CreationDate>
+      <LastModificationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2015-02-23 :: 10:46:14:067 IST</LastModificationDate>
+    </ReviewIssueMeta>
+    <ReviewerId>Krishantha</ReviewerId>
+    <AssignedTo>Krishantha</AssignedTo>
+    <File line="19">src/main/resources/pagerduty_contactMethod/createContactMethod.xml</File>
+    <Type>item.label.unset</Type>
+    <Severity>item.label.unset</Severity>
+    <Summary></Summary>
+    <Description>add API doc url for perticular method. (in all methods)</Description>
+    <Annotation></Annotation>
+    <Revision>API Doc URL added to all the methods.</Revision>
+    <Resolution>item.label.unset</Resolution>
+    <Status>item.status.label.closed</Status>
+  </ReviewIssue>
+</Review>

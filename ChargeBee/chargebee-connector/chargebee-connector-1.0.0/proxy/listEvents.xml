@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy xmlns="http://ws.apache.org/ns/synapse" name="chargebee_listEvents" transports="https,http" statistics="disable" trace="disable" startOnLoad="true">
+	<target>
+		<inSequence>
+								<property name="limit" expression="json-eval($.limit)" />
+											<property name="offset" expression="json-eval($.offset)" />
+											<property name="startTime" expression="json-eval($.startTime)" />
+											<property name="endTime" expression="json-eval($.endTime)" />
+											<property name="webhookStatus" expression="json-eval($.webhookStatus)" />
+											<property name="eventType" expression="json-eval($.eventType)" />
+								<chargebee.listEvents>
+							<limit>{$ctx:limit}</limit>
+							<offset>{$ctx:offset}</offset>
+							<startTime>{$ctx:startTime}</startTime>
+							<endTime>{$ctx:endTime}</endTime>
+							<webhookStatus>{$ctx:webhookStatus}</webhookStatus>
+							<eventType>{$ctx:eventType}</eventType>
+						</chargebee.listEvents>
+			<respond />
+		</inSequence>
+		<outSequence>
+			<log />
+			<send />
+		</outSequence>
+	</target>
+	<description />
+</proxy>  

@@ -1,0 +1,8 @@
+{
+   "apiUrl" : "https://virasoft.pagerduty.com",
+   "apiToken" : "uAB6yAsCkWxPqdCbuJqd",
+   "query" : "k",
+   "include" : ["contact_methods", "notification_rules"],
+   "limit" : "3",
+   "offset" : "1"
+}

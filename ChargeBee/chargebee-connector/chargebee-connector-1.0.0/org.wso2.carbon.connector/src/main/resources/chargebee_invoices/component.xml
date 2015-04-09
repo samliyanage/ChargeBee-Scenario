@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="chargebee_invoices" type="synapse/template">
+  <subComponents>
+    	<component name="listInvoices">
+      <file>listInvoices.xml</file>
+      <description>List all invoices</description>
+    </component>
+    </subComponents>
+</component>

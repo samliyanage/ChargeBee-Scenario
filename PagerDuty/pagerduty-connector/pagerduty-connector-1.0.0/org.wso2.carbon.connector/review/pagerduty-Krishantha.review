@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Review id="pagerduty">
+  <ReviewIssue id="I6DQ0E23">
+    <ReviewIssueMeta>
+      <CreationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2015-02-20 :: 20:46:36:267 IST</CreationDate>
+      <LastModificationDate format="yyyy-MM-dd :: HH:mm:ss:SSS z">2015-02-20 :: 20:46:51:255 IST</LastModificationDate>
+    </ReviewIssueMeta>
+    <ReviewerId>Krishantha</ReviewerId>
+    <AssignedTo></AssignedTo>
+    <File line="37">src/test/java/org/wso2/carbon/connector/integration/test/pagerduty/PagerdutyConnectorIntegrationTest.java</File>
+    <Type>item.label.unset</Type>
+    <Severity>item.label.unset</Severity>
+    <Summary></Summary>
+    <Description>move instationation to setEnviorment</Description>
+    <Annotation></Annotation>
+    <Revision>Map instantiation moved to the setEnvironment method</Revision>
+    <Resolution>item.label.unset</Resolution>
+    <Status>item.status.label.closed</Status>
+  </ReviewIssue>
+</Review>

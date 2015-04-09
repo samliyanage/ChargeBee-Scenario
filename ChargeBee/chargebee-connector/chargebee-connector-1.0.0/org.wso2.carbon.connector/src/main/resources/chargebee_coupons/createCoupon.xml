@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template name="createCoupon" xmlns="http://ws.apache.org/ns/synapse">
+		<parameter name="couponId" description="The couponId" />
+		<parameter name="couponName" description="The couponName" />
+		<parameter name="invoiceName" description="The invoiceName" />
+		<parameter name="discountType" description="The discountType" />
+		<parameter name="discountAmount" description="The discountAmount" />
+		<parameter name="discountPercentage" description="The discountPercentage" />
+		<parameter name="discountQuantity" description="The discountQuantity" />
+		<parameter name="applyOn" description="The applyOn" />
+		<parameter name="planConstraint" description="The planConstraint" />
+		<parameter name="addonConstraint" description="The addonConstraint" />
+		<parameter name="planIds" description="The planIds" />
+		<parameter name="addonIds" description="The addonIds" />
+		<parameter name="durationType" description="The durationType" />
+		<parameter name="durationMonth" description="The durationMonth" />
+		<parameter name="validTill" description="The validTill" />
+		<parameter name="maxRedemptions" description="The maxRedemptions" />
+		<sequence>
+				<property expression="$func:couponId" name="uri.var.couponId" />
+				<property expression="$func:couponName" name="uri.var.couponName" />
+				<property expression="$func:invoiceName" name="uri.var.invoiceName" />
+				<property expression="$func:discountType" name="uri.var.discountType" />
+				<property expression="$func:discountAmount" name="uri.var.discountAmount" />
+				<property expression="$func:discountPercentage" name="uri.var.discountPercentage" />
+				<property expression="$func:discountQuantity" name="uri.var.discountQuantity" />
+				<property expression="$func:applyOn" name="uri.var.applyOn" />
+				<property expression="$func:planConstraint" name="uri.var.planConstraint" />
+				<property expression="$func:addonConstraint" name="uri.var.addonConstraint" />
+				<property expression="$func:planIds" name="uri.var.planIds" />
+				<property expression="$func:addonIds" name="uri.var.addonIds" />
+				<property expression="$func:durationType" name="uri.var.durationType" />
+				<property expression="$func:durationMonth" name="uri.var.durationMonth" />
+				<property expression="$func:validTill" name="uri.var.validTill" />
+				<property expression="$func:maxRedemptions" name="uri.var.maxRedemptions" />
+						<call>
+			<endpoint>
+				<http method="post" uri-template="{uri.var.apiUrl}" />
+			</endpoint>
+		</call>
+	</sequence>
+</template>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy xmlns="http://ws.apache.org/ns/synapse" name="chargebee_createPlan" transports="https,http" statistics="disable" trace="disable" startOnLoad="true">
+	<target>
+		<inSequence>
+								<property name="planId" expression="json-eval($.planId)" />
+											<property name="planName" expression="json-eval($.planName)" />
+											<property name="invoiceName" expression="json-eval($.invoiceName)" />
+											<property name="description" expression="json-eval($.description)" />
+											<property name="trialPeriod" expression="json-eval($.trialPeriod)" />
+											<property name="trialPeriodUnit" expression="json-eval($.trialPeriodUnit)" />
+											<property name="period" expression="json-eval($.period)" />
+											<property name="periodUnit" expression="json-eval($.periodUnit)" />
+											<property name="setupCost" expression="json-eval($.setupCost)" />
+											<property name="price" expression="json-eval($.price)" />
+											<property name="billingCycles" expression="json-eval($.billingCycles)" />
+											<property name="chargeModel" expression="json-eval($.chargeModel)" />
+											<property name="freeQuantity" expression="json-eval($.freeQuantity)" />
+											<property name="downgradePenalty" expression="json-eval($.downgradePenalty)" />
+											<property name="redirectUrl" expression="json-eval($.redirectUrl)" />
+											<property name="enabledInHostedPages" expression="json-eval($.enabledInHostedPages)" />
+								<chargebee.createPlan>
+							<planId>{$ctx:planId}</planId>
+							<planName>{$ctx:planName}</planName>
+							<invoiceName>{$ctx:invoiceName}</invoiceName>
+							<description>{$ctx:description}</description>
+							<trialPeriod>{$ctx:trialPeriod}</trialPeriod>
+							<trialPeriodUnit>{$ctx:trialPeriodUnit}</trialPeriodUnit>
+							<period>{$ctx:period}</period>
+							<periodUnit>{$ctx:periodUnit}</periodUnit>
+							<setupCost>{$ctx:setupCost}</setupCost>
+							<price>{$ctx:price}</price>
+							<billingCycles>{$ctx:billingCycles}</billingCycles>
+							<chargeModel>{$ctx:chargeModel}</chargeModel>
+							<freeQuantity>{$ctx:freeQuantity}</freeQuantity>
+							<downgradePenalty>{$ctx:downgradePenalty}</downgradePenalty>
+							<redirectUrl>{$ctx:redirectUrl}</redirectUrl>
+							<enabledInHostedPages>{$ctx:enabledInHostedPages}</enabledInHostedPages>
+						</chargebee.createPlan>
+			<respond />
+		</inSequence>
+		<outSequence>
+			<log />
+			<send />
+		</outSequence>
+	</target>
+	<description />
+</proxy>  

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy xmlns="http://ws.apache.org/ns/synapse"
+       name="pagerduty_createContactMethod"
+       transports="https,http"
+       statistics="disable"
+       trace="disable"
+       startOnLoad="true">
+   <target>
+      <inSequence onError="faultHandlerSeq">
+         <property name="apiUrl" expression="json-eval($.apiUrl)"/>
+         <property name="apiToken" expression="json-eval($.apiToken)"/>
+         <property name="userId" expression="json-eval($.userId)"/>
+         <property name="type" expression="json-eval($.type)"/>
+         <property name="address" expression="json-eval($.address)"/>
+         <property name="countryCode" expression="json-eval($.countryCode)"/>
+         <property name="label" expression="json-eval($.label)"/>
+         <property name="isSendShortEmail" expression="json-eval($.isSendShortEmail)"/>
+         <pagerduty.init>
+            <apiUrl>{$ctx:apiUrl}</apiUrl>
+            <apiToken>{$ctx:apiToken}</apiToken>
+         </pagerduty.init>
+         <pagerduty.createContactMethod>
+            <userId>{$ctx:userId}</userId>
+            <type>{$ctx:type}</type>
+            <address>{$ctx:address}</address>
+            <countryCode>{$ctx:countryCode}</countryCode>
+            <label>{$ctx:label}</label>
+            <isSendShortEmail>{$ctx:isSendShortEmail}</isSendShortEmail>
+         </pagerduty.createContactMethod>
+         <respond/>
+      </inSequence>
+      <outSequence>
+         <log/>
+         <send/>
+      </outSequence>
+   </target>
+   <description/>
+</proxy>
+                                

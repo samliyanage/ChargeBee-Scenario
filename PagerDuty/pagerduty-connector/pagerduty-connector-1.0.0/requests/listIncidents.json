@@ -1,0 +1,16 @@
+{
+   "apiUrl" : "https://virasoft.pagerduty.com",
+   "apiToken" : "uAB6yAsCkWxPqdCbuJqd",
+   "since" : "2015-02-01T10:43:31Z",
+   "until" : "2015-02-25T10:43:31Z",
+   "dateRange" : "all",
+   "fields" : "escalation_policy",
+   "status" : "resolved",
+   "incidentKey" : "inci1",
+   "service" : "PJHE3B2",
+   "assignedToUser" : "",
+   "timeZone" : "Berlin",
+   "sortBy" : "created_on:desc",
+   "limit" : "10",
+   "offset" : "0"
+}

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy xmlns="http://ws.apache.org/ns/synapse"
+       name="pagerduty_getUserById"
+       transports="https,http"
+       statistics="disable"
+       trace="disable"
+       startOnLoad="true">
+   <target>
+      <inSequence onError="faultHandlerSeq">
+         <property name="apiUrl" expression="json-eval($.apiUrl)"/>
+         <property name="apiToken" expression="json-eval($.apiToken)"/>
+         <property name="userId" expression="json-eval($.userId)"/>
+         <property name="include" expression="json-eval($.include)"/>
+         <pagerduty.init>
+            <apiUrl>{$ctx:apiUrl}</apiUrl>
+            <apiToken>{$ctx:apiToken}</apiToken>
+         </pagerduty.init>
+         <pagerduty.getUserById>
+            <userId>{$ctx:userId}</userId>
+            <include>{$ctx:include}</include>
+         </pagerduty.getUserById>
+         <respond/>
+      </inSequence>
+      <outSequence>
+         <log/>
+         <send/>
+      </outSequence>
+   </target>
+   <description/>
+</proxy>
+                                

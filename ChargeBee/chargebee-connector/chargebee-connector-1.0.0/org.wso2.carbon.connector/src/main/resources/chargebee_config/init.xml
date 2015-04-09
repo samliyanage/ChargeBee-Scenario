@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template name="init" xmlns="http://ws.apache.org/ns/synapse">
+		<parameter name="apiUrl" description="The apiUrl" />
+		<parameter name="apiKey" description="The apiKey" />
+		<sequence>
+				<property expression="$func:apiUrl" name="uri.var.apiUrl" />
+				<property expression="$func:apiKey" name="uri.var.apiKey" />
+						<call>
+			<endpoint>
+				<http method="post" uri-template="{uri.var.apiUrl}" />
+			</endpoint>
+		</call>
+	</sequence>
+</template>

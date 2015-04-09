@@ -1,0 +1,18 @@
+{
+	"couponId" : "",
+	"couponName" : "",
+	"invoiceName" : "",
+	"discountType" : "",
+	"discountAmount" : "",
+	"discountPercentage" : "",
+	"discountQuantity" : "",
+	"applyOn" : "",
+	"planConstraint" : "",
+	"addonConstraint" : "",
+	"planIds" : "",
+	"addonIds" : "",
+	"durationType" : "",
+	"durationMonth" : "",
+	"validTill" : "",
+	"maxRedemptions" : "",
+}

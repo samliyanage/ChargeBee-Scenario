@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy xmlns="http://ws.apache.org/ns/synapse"
+       name="pagerduty_listNotes"
+       transports="https,http"
+       statistics="disable"
+       trace="disable"
+       startOnLoad="true">
+   <target>
+      <inSequence onError="faultHandlerSeq">
+         <property name="apiUrl" expression="json-eval($.apiUrl)"/>
+         <property name="apiToken" expression="json-eval($.apiToken)"/>
+         <property name="incidentId" expression="json-eval($.incidentId)"/>
+         <pagerduty.init>
+            <apiUrl>{$ctx:apiUrl}</apiUrl>
+            <apiToken>{$ctx:apiToken}</apiToken>
+         </pagerduty.init>
+         <pagerduty.listNotes>
+            <incidentId>{$ctx:incidentId}</incidentId>
+         </pagerduty.listNotes>
+         <respond/>
+      </inSequence>
+      <outSequence>
+         <log/>
+         <send/>
+      </outSequence>
+   </target>
+   <description/>
+</proxy>
+                                

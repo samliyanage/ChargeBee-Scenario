@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy xmlns="http://ws.apache.org/ns/synapse"
+       name="pagerduty_createUser"
+       transports="https,http"
+       statistics="disable"
+       trace="disable"
+       startOnLoad="true">
+   <target>
+      <inSequence onError="faultHandlerSeq">
+         <property name="apiUrl" expression="json-eval($.apiUrl)"/>
+         <property name="apiToken" expression="json-eval($.apiToken)"/>
+         <property name="role" expression="json-eval($.role)"/>
+         <property name="name" expression="json-eval($.name)"/>
+         <property name="email" expression="json-eval($.email)"/>
+         <property name="jobTitle" expression="json-eval($.jobTitle)"/>
+         <property name="timeZone" expression="json-eval($.timeZone)"/>
+         <property name="requesterId" expression="json-eval($.requesterId)"/>
+         <pagerduty.init>
+            <apiUrl>{$ctx:apiUrl}</apiUrl>
+            <apiToken>{$ctx:apiToken}</apiToken>
+         </pagerduty.init>
+         <pagerduty.createUser>
+            <role>{$ctx:role}</role>
+            <name>{$ctx:name}</name>
+            <email>{$ctx:email}</email>
+            <jobTitle>{$ctx:jobTitle}</jobTitle>
+            <timeZone>{$ctx:timeZone}</timeZone>
+            <requesterId>{$ctx:requesterId}</requesterId>
+         </pagerduty.createUser>
+         <respond/>
+      </inSequence>
+      <outSequence>
+         <log/>
+         <send/>
+      </outSequence>
+   </target>
+   <description/>
+</proxy>
+                                

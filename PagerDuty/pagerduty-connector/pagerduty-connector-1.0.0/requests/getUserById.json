@@ -1,0 +1,6 @@
+{
+   "apiUrl" : "https://virasoft.pagerduty.com",
+   "apiToken" : "uAB6yAsCkWxPqdCbuJqd",
+   "userId" : "PD83TQS",
+   "include" : ["contact_methods", "notification_rules"]
+}

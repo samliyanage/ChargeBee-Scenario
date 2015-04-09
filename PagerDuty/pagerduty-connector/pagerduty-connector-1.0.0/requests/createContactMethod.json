@@ -1,0 +1,10 @@
+{
+	"apiUrl" : "https://virasoft.pagerduty.com",
+	"apiToken" : "uAB6yAsCkWxPqdCbuJqd",
+	"userId" : "PAR9SSS",
+	"type" : "phone",
+	"address" : "785145654",
+	"countryCode" : "94",
+	"label" : "My Mobile",
+	"isSendShortEmail" : "false"
+}

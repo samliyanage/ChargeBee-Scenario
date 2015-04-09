@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy xmlns="http://ws.apache.org/ns/synapse"
+       name="pagerduty_createIncident"
+       transports="https,http"
+       statistics="disable"
+       trace="disable"
+       startOnLoad="true">
+   <target>
+      <inSequence onError="faultHandlerSeq">
+         <property name="serviceKey" expression="json-eval($.serviceKey)"/>
+         <property name="eventType" expression="json-eval($.eventType)"/>
+         <property name="description" expression="json-eval($.description)"/>
+         <property name="incidentKey" expression="json-eval($.incidentKey)"/>
+         <property name="client" expression="json-eval($.client)"/>
+         <property name="clientUrl" expression="json-eval($.clientUrl)"/>
+         <property name="details" expression="json-eval($.details)"/>
+         <pagerduty.createIncident>
+            <serviceKey>{$ctx:serviceKey}</serviceKey>
+            <eventType>{$ctx:eventType}</eventType>
+            <description>{$ctx:description}</description>
+            <incidentKey>{$ctx:incidentKey}</incidentKey>
+            <client>{$ctx:client}</client>
+            <clientUrl>{$ctx:clientUrl}</clientUrl>
+            <details>{$ctx:details}</details>
+         </pagerduty.createIncident>
+         <respond/>
+      </inSequence>
+      <outSequence>
+         <log/>
+         <send/>
+      </outSequence>
+   </target>
+   <description/>
+</proxy>
+                                

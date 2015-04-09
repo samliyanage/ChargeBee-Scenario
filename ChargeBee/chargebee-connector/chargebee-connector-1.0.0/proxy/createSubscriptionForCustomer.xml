@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy xmlns="http://ws.apache.org/ns/synapse" name="chargebee_createSubscriptionForCustomer" transports="https,http" statistics="disable" trace="disable" startOnLoad="true">
+	<target>
+		<inSequence>
+								<property name="subscriptionId" expression="json-eval($.subscriptionId)" />
+											<property name="planId" expression="json-eval($.planId)" />
+											<property name="planQuantity" expression="json-eval($.planQuantity)" />
+											<property name="startDate" expression="json-eval($.startDate)" />
+											<property name="trialEndDate" expression="json-eval($.trialEndDate)" />
+											<property name="billingCycles" expression="json-eval($.billingCycles)" />
+											<property name="couponId" expression="json-eval($.couponId)" />
+											<property name="shippingAddressFirstName" expression="json-eval($.shippingAddressFirstName)" />
+											<property name="shippingAddressLastName" expression="json-eval($.shippingAddressLastName)" />
+											<property name="shippingAddressEmail" expression="json-eval($.shippingAddressEmail)" />
+											<property name="shippingAddressCompanyName" expression="json-eval($.shippingAddressCompanyName)" />
+											<property name="shippingAddressPhoneNumber" expression="json-eval($.shippingAddressPhoneNumber)" />
+											<property name="shippingAddressLine1" expression="json-eval($.shippingAddressLine1)" />
+											<property name="shippingAddressLine2" expression="json-eval($.shippingAddressLine2)" />
+											<property name="shippingAddressLine3" expression="json-eval($.shippingAddressLine3)" />
+											<property name="shippingAddressCity" expression="json-eval($.shippingAddressCity)" />
+											<property name="shippingAddressStateCode" expression="json-eval($.shippingAddressStateCode)" />
+											<property name="shippingAddressState" expression="json-eval($.shippingAddressState)" />
+											<property name="shippingAddressZip" expression="json-eval($.shippingAddressZip)" />
+											<property name="shippingAddressCountry" expression="json-eval($.shippingAddressCountry)" />
+											<property name="addonIds" expression="json-eval($.addonIds)" />
+											<property name="addonsQuantity" expression="json-eval($.addonsQuantity)" />
+								<chargebee.createSubscriptionForCustomer>
+							<subscriptionId>{$ctx:subscriptionId}</subscriptionId>
+							<planId>{$ctx:planId}</planId>
+							<planQuantity>{$ctx:planQuantity}</planQuantity>
+							<startDate>{$ctx:startDate}</startDate>
+							<trialEndDate>{$ctx:trialEndDate}</trialEndDate>
+							<billingCycles>{$ctx:billingCycles}</billingCycles>
+							<couponId>{$ctx:couponId}</couponId>
+							<shippingAddressFirstName>{$ctx:shippingAddressFirstName}</shippingAddressFirstName>
+							<shippingAddressLastName>{$ctx:shippingAddressLastName}</shippingAddressLastName>
+							<shippingAddressEmail>{$ctx:shippingAddressEmail}</shippingAddressEmail>
+							<shippingAddressCompanyName>{$ctx:shippingAddressCompanyName}</shippingAddressCompanyName>
+							<shippingAddressPhoneNumber>{$ctx:shippingAddressPhoneNumber}</shippingAddressPhoneNumber>
+							<shippingAddressLine1>{$ctx:shippingAddressLine1}</shippingAddressLine1>
+							<shippingAddressLine2>{$ctx:shippingAddressLine2}</shippingAddressLine2>
+							<shippingAddressLine3>{$ctx:shippingAddressLine3}</shippingAddressLine3>
+							<shippingAddressCity>{$ctx:shippingAddressCity}</shippingAddressCity>
+							<shippingAddressStateCode>{$ctx:shippingAddressStateCode}</shippingAddressStateCode>
+							<shippingAddressState>{$ctx:shippingAddressState}</shippingAddressState>
+							<shippingAddressZip>{$ctx:shippingAddressZip}</shippingAddressZip>
+							<shippingAddressCountry>{$ctx:shippingAddressCountry}</shippingAddressCountry>
+							<addonIds>{$ctx:addonIds}</addonIds>
+							<addonsQuantity>{$ctx:addonsQuantity}</addonsQuantity>
+						</chargebee.createSubscriptionForCustomer>
+			<respond />
+		</inSequence>
+		<outSequence>
+			<log />
+			<send />
+		</outSequence>
+	</target>
+	<description />
+</proxy>  

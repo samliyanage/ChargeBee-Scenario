@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy xmlns="http://ws.apache.org/ns/synapse"
+       name="pagerduty_listIncidents"
+       transports="https,http"
+       statistics="disable"
+       trace="disable"
+       startOnLoad="true">
+   <target>
+      <inSequence onError="faultHandlerSeq">
+         <property name="apiUrl" expression="json-eval($.apiUrl)"/>
+         <property name="apiToken" expression="json-eval($.apiToken)"/>
+         <property name="since" expression="json-eval($.since)"/>
+         <property name="until" expression="json-eval($.until)"/>
+         <property name="dateRange" expression="json-eval($.dateRange)"/>
+         <property name="fields" expression="json-eval($.fields)"/>
+         <property name="status" expression="json-eval($.status)"/>
+         <property name="incidentKey" expression="json-eval($.incidentKey)"/>
+         <property name="service" expression="json-eval($.service)"/>
+         <property name="assignedToUser" expression="json-eval($.assignedToUser)"/>
+         <property name="timeZone" expression="json-eval($.timeZone)"/>
+         <property name="sortBy" expression="json-eval($.sortBy)"/>
+         <property name="limit" expression="json-eval($.limit)"/>
+         <property name="offset" expression="json-eval($.offset)"/>
+         <pagerduty.init>
+            <apiUrl>{$ctx:apiUrl}</apiUrl>
+            <apiToken>{$ctx:apiToken}</apiToken>
+         </pagerduty.init>
+         <pagerduty.listIncidents>
+            <since>{$ctx:since}</since>
+            <until>{$ctx:until}</until>
+            <dateRange>{$ctx:dateRange}</dateRange>
+            <fields>{$ctx:fields}</fields>
+            <status>{$ctx:status}</status>
+            <incidentKey>{$ctx:incidentKey}</incidentKey>
+            <service>{$ctx:service}</service>
+            <assignedToUser>{$ctx:assignedToUser}</assignedToUser>
+            <timeZone>{$ctx:timeZone}</timeZone>
+            <sortBy>{$ctx:sortBy}</sortBy>
+            <limit>{$ctx:limit}</limit>
+            <offset>{$ctx:offset}</offset>
+         </pagerduty.listIncidents>
+         <respond/>
+      </inSequence>
+      <outSequence>
+         <log/>
+         <send/>
+      </outSequence>
+   </target>
+   <description/>
+</proxy>
+                                

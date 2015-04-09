@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy xmlns="http://ws.apache.org/ns/synapse"
+       name="pagerduty_listUsers"
+       transports="https,http"
+       statistics="disable"
+       trace="disable"
+       startOnLoad="true">
+   <target>
+      <inSequence onError="faultHandlerSeq">
+         <property name="apiUrl" expression="json-eval($.apiUrl)"/>
+         <property name="apiToken" expression="json-eval($.apiToken)"/>
+         <property name="query" expression="json-eval($.query)"/>
+         <property name="include" expression="json-eval($.include)"/>
+         <property name="limit" expression="json-eval($.limit)"/>
+         <property name="offset" expression="json-eval($.offset)"/>
+         <pagerduty.init>
+            <apiUrl>{$ctx:apiUrl}</apiUrl>
+            <apiToken>{$ctx:apiToken}</apiToken>
+         </pagerduty.init>
+         <pagerduty.listUsers>
+            <query>{$ctx:query}</query>
+            <include>{$ctx:include}</include>
+            <limit>{$ctx:limit}</limit>
+            <offset>{$ctx:offset}</offset>
+         </pagerduty.listUsers>
+         <respond/>
+      </inSequence>
+      <outSequence>
+         <log/>
+         <send/>
+      </outSequence>
+   </target>
+   <description/>
+</proxy>
+                                

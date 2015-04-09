@@ -1,0 +1,11 @@
+{
+   "serviceKey" : "ad0be87835fd4f31adfc13c5e4d9ddf1",
+   "eventType" : "trigger",
+   "description" : "My Issue test",
+   "incidentKey" : "Issue4",
+   "client" : "anuradhika.wije@gmail.com",
+   "clientUrl" : "https://www.virutsa.com",
+   "details" : {
+      "name": "Fine details object"
+   }
+}

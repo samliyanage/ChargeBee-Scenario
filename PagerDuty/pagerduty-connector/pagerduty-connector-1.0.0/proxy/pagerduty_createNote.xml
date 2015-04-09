@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy xmlns="http://ws.apache.org/ns/synapse"
+       name="pagerduty_createNote"
+       transports="https,http"
+       statistics="disable"
+       trace="disable"
+       startOnLoad="true">
+   <target>
+      <inSequence onError="faultHandlerSeq">
+         <property name="apiUrl" expression="json-eval($.apiUrl)"/>
+         <property name="apiToken" expression="json-eval($.apiToken)"/>
+         <property name="incidentId" expression="json-eval($.incidentId)"/>
+         <property name="requesterId" expression="json-eval($.requesterId)"/>
+         <property name="noteContent" expression="json-eval($.noteContent)"/>
+         <pagerduty.init>
+            <apiUrl>{$ctx:apiUrl}</apiUrl>
+            <apiToken>{$ctx:apiToken}</apiToken>
+         </pagerduty.init>
+         <pagerduty.createNote>
+            <incidentId>{$ctx:incidentId}</incidentId>
+            <requesterId>{$ctx:requesterId}</requesterId>
+            <noteContent>{$ctx:noteContent}</noteContent>
+         </pagerduty.createNote>
+         <respond/>
+      </inSequence>
+      <outSequence>
+         <log/>
+         <send/>
+      </outSequence>
+   </target>
+   <description/>
+</proxy>
+                                
