@@ -26,6 +26,8 @@ Mahesh
 	listInvoices
 	listEvents
 
+API Reference: https://apidocs.chargebee.com/docs/api/
+
 ESB 4.8.1 Patch Location
 	https://www.dropbox.com/sh/xfo44mtk0jzcbnk/AADI1oZ_kRxLdXKBOvQ5Iga8a?dl=0
 
