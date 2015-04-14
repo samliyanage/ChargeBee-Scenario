@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy xmlns="http://ws.apache.org/ns/synapse" name="chargebee" transports="https,http" statistics="disable"
+   trace="disable" startOnLoad="true">
+   <target>
+      <inSequence>
+         <property name="apiUrl" expression="json-eval($.apiUrl)" />
+         <property name="apiKey" expression="json-eval($.apiKey)" />
+         <property name="couponId" expression="json-eval($.couponId)" />
+         <property name="couponName" expression="json-eval($.couponName)" />
+         <property name="discountType" expression="json-eval($.discountType)" />
+         <property name="applyOn" expression="json-eval($.applyOn)" />
+         <property name="discountAmount" expression="json-eval($.discountAmount)" />
+         <property name="invoiceName" expression="json-eval($.invoiceName)" />
+         <property name="invoiceNotes" expression="json-eval($.invoiceNotes)" />
+         <property name="validTill" expression="json-eval($.validTill)" />
+         <property name="durationType" expression="json-eval($.durationType)" />
+         <chargebee.init>
+            <apiUrl>{$ctx:apiUrl}</apiUrl>
+            <apiKey>{$ctx:apiKey}</apiKey>
+         </chargebee.init>
+         <switch source="get-property('transport', 'Action')">
+            <case regex="urn:createCoupon">
+               <chargebee.createCoupon>
+                  <couponId>{$ctx:couponId}</couponId>
+                  <couponName>{$ctx:couponName}</couponName>
+                  <discountType>{$ctx:discountType}</discountType>
+                  <applyOn>{$ctx:applyOn}</applyOn>
+                  <discountAmount>{$ctx:discountAmount}</discountAmount>
+                  <invoiceName>{$ctx:invoiceName}</invoiceName>
+                  <invoiceNotes>{$ctx:invoiceNotes}</invoiceNotes>
+                  <validTill>{$ctx:validTill}</validTill>
+                  <durationType>{$ctx:durationType}</durationType>
+               </chargebee.createCoupon>
+            </case>
+         </switch>
+         <respond />
+      </inSequence>
+      <outSequence>
+         <log />
+         <send />
+      </outSequence>
+   </target>
+   <description />
+</proxy>
+                                
