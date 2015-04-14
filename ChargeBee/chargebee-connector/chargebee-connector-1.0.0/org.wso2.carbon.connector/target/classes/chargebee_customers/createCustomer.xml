@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template name="createCustomer" xmlns="http://ws.apache.org/ns/synapse">
+		<parameter name="customerId" description="The customerId" />
+		<parameter name="firstName" description="The firstName" />
+		<parameter name="lastName" description="The lastName" />
+		<parameter name="email" description="The email" />
+		<parameter name="phoneNumber" description="The phoneNumber" />
+		<parameter name="companyName" description="The companyName" />
+		<parameter name="autoCollection" description="The autoCollection" />
+		<parameter name="vatNumber" description="The vatNumber" />
+		<parameter name="createdFromIp" description="The createdFromIp" />
+		<parameter name="cardGateway" description="The cardGateway" />
+		<parameter name="cardTmpToken" description="The cardTmpToken" />
+		<parameter name="cardFirstName" description="The cardFirstName" />
+		<parameter name="cardLastName" description="The cardLastName" />
+		<parameter name="cardNumber" description="The cardNumber" />
+		<parameter name="cardExpiryMonth" description="The cardExpiryMonth" />
+		<parameter name="cardExpiryYear" description="The cardExpiryYear" />
+		<parameter name="cardCVV" description="The cardCVV" />
+		<parameter name="cardBillingAddress1" description="The cardBillingAddress1" />
+		<parameter name="cardBillingAddress2" description="The cardBillingAddress2" />
+		<parameter name="cardBillingCity" description="The cardBillingCity" />
+		<parameter name="cardBillingStateCode" description="The cardBillingStateCode" />
+		<parameter name="cardBillingState" description="The cardBillingState" />
+		<parameter name="cardBillingZip" description="The cardBillingZip" />
+		<parameter name="cardBillingCountry" description="The cardBillingCountry" />
+		<parameter name="cardIpAddress" description="The cardIpAddress" />
+		<parameter name="billingAddressFirstName" description="The billingAddressFirstName" />
+		<parameter name="billingAddressLastName" description="The billingAddressLastName" />
+		<parameter name="billingAddressEmail" description="The billingAddressEmail" />
+		<parameter name="billingAddressCompanyName" description="The billingAddressCompanyName" />
+		<parameter name="billingAddressPhoneNumber" description="The billingAddressPhoneNumber" />
+		<parameter name="billingAddressLine1" description="The billingAddressLine1" />
+		<parameter name="billingAddressLine2" description="The billingAddressLine2" />
+		<parameter name="billingAddressLine3" description="The billingAddressLine3" />
+		<parameter name="billingAddressCity" description="The billingAddressCity" />
+		<parameter name="billingAddressStateCode" description="The billingAddressStateCode" />
+		<parameter name="billingAddressState" description="The billingAddressState" />
+		<parameter name="billingAddressZip" description="The billingAddressZip" />
+		<parameter name="billingAddressCountry" description="The billingAddressCountry" />
+		<sequence>
+				<property expression="$func:customerId" name="uri.var.customerId" />
+				<property expression="$func:firstName" name="uri.var.firstName" />
+				<property expression="$func:lastName" name="uri.var.lastName" />
+				<property expression="$func:email" name="uri.var.email" />
+				<property expression="$func:phoneNumber" name="uri.var.phoneNumber" />
+				<property expression="$func:companyName" name="uri.var.companyName" />
+				<property expression="$func:autoCollection" name="uri.var.autoCollection" />
+				<property expression="$func:vatNumber" name="uri.var.vatNumber" />
+				<property expression="$func:createdFromIp" name="uri.var.createdFromIp" />
+				<property expression="$func:cardGateway" name="uri.var.cardGateway" />
+				<property expression="$func:cardTmpToken" name="uri.var.cardTmpToken" />
+				<property expression="$func:cardFirstName" name="uri.var.cardFirstName" />
+				<property expression="$func:cardLastName" name="uri.var.cardLastName" />
+				<property expression="$func:cardNumber" name="uri.var.cardNumber" />
+				<property expression="$func:cardExpiryMonth" name="uri.var.cardExpiryMonth" />
+				<property expression="$func:cardExpiryYear" name="uri.var.cardExpiryYear" />
+				<property expression="$func:cardCVV" name="uri.var.cardCVV" />
+				<property expression="$func:cardBillingAddress1" name="uri.var.cardBillingAddress1" />
+				<property expression="$func:cardBillingAddress2" name="uri.var.cardBillingAddress2" />
+				<property expression="$func:cardBillingCity" name="uri.var.cardBillingCity" />
+				<property expression="$func:cardBillingStateCode" name="uri.var.cardBillingStateCode" />
+				<property expression="$func:cardBillingState" name="uri.var.cardBillingState" />
+				<property expression="$func:cardBillingZip" name="uri.var.cardBillingZip" />
+				<property expression="$func:cardBillingCountry" name="uri.var.cardBillingCountry" />
+				<property expression="$func:cardIpAddress" name="uri.var.cardIpAddress" />
+				<property expression="$func:billingAddressFirstName" name="uri.var.billingAddressFirstName" />
+				<property expression="$func:billingAddressLastName" name="uri.var.billingAddressLastName" />
+				<property expression="$func:billingAddressEmail" name="uri.var.billingAddressEmail" />
+				<property expression="$func:billingAddressCompanyName" name="uri.var.billingAddressCompanyName" />
+				<property expression="$func:billingAddressPhoneNumber" name="uri.var.billingAddressPhoneNumber" />
+				<property expression="$func:billingAddressLine1" name="uri.var.billingAddressLine1" />
+				<property expression="$func:billingAddressLine2" name="uri.var.billingAddressLine2" />
+				<property expression="$func:billingAddressLine3" name="uri.var.billingAddressLine3" />
+				<property expression="$func:billingAddressCity" name="uri.var.billingAddressCity" />
+				<property expression="$func:billingAddressStateCode" name="uri.var.billingAddressStateCode" />
+				<property expression="$func:billingAddressState" name="uri.var.billingAddressState" />
+				<property expression="$func:billingAddressZip" name="uri.var.billingAddressZip" />
+				<property expression="$func:billingAddressCountry" name="uri.var.billingAddressCountry" />
+						<call>
+			<endpoint>
+				<http method="post" uri-template="{uri.var.apiUrl}" />
+			</endpoint>
+		</call>
+	</sequence>
+</template>

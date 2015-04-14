@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="chargebee_customers" type="synapse/template">
+  <subComponents>
+    	<component name="createCustomer">
+      <file>createCustomer.xml</file>
+      <description>Creates a new customer</description>
+    </component>
+    	<component name="listCustomers">
+      <file>listCustomers.xml</file>
+      <description>List all customers</description>
+    </component>
+    	<component name="getCustomer">
+      <file>getCustomer.xml</file>
+      <description>Retrieve single customer for a given customerId</description>
+    </component>
+    </subComponents>
+</component>

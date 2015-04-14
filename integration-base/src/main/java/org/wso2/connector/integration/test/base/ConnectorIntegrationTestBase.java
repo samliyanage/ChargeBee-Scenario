@@ -46,7 +46,6 @@ import java.util.Properties;
 import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
 import javax.activation.DataHandler;
 import javax.activation.FileDataSource;
 import javax.xml.parsers.DocumentBuilder;
@@ -79,7 +78,6 @@ import org.json.JSONObject;
 import org.testng.annotations.AfterClass;
 import org.w3c.dom.Document;
 import org.wso2.carbon.automation.api.clients.proxy.admin.ProxyServiceAdminClient;
-import org.wso2.carbon.automation.api.clients.sequences.SequenceAdminServiceClient;
 import org.wso2.carbon.automation.api.clients.utils.AuthenticateStub;
 import org.wso2.carbon.automation.core.ProductConstant;
 import org.wso2.carbon.automation.utils.axis2client.ConfigurationContextProvider;
@@ -88,7 +86,6 @@ import org.wso2.carbon.mediation.library.stub.MediationLibraryAdminServiceStub;
 import org.wso2.carbon.mediation.library.stub.upload.MediationLibraryUploaderStub;
 import org.wso2.carbon.mediation.library.stub.upload.types.carbon.LibraryFileItem;
 import org.wso2.carbon.proxyadmin.stub.ProxyServiceAdminProxyAdminException;
-import org.wso2.carbon.sequences.stub.types.SequenceEditorException;
 import org.xml.sax.SAXException;
 
 /**
@@ -114,8 +111,6 @@ public abstract class ConnectorIntegrationTestBase extends ESBIntegrationTest {
     private String pathToProxiesDirectory;
     
     private String pathToRequestsDirectory;
-    
-    private String pathToSequencesDirectory;
     
     protected String proxyUrl;
     
@@ -152,14 +147,14 @@ public abstract class ConnectorIntegrationTestBase extends ESBIntegrationTest {
         }
         
         proxyAdmin = new ProxyServiceAdminClient(esbServer.getBackEndUrl(), esbServer.getSessionCookie());
-        /*
+        
         String connectorFileName = connectorName + ".zip";
-        uploadConnector(repoLocation, mediationLibUploadStub, connectorFileName);
-        */
+        //uploadConnector(repoLocation, mediationLibUploadStub, connectorFileName);
+        
         // Connector file name comes with version,however mediation process only with name.
         connectorName = connectorName.split("-")[0];
         this.connectorName = connectorName;
-        /*
+       /* 
         byte maxAttempts = 3;
         int sleepTimer = 30000;
         for (byte attemptCount = 0; attemptCount < maxAttempts; attemptCount++) {
@@ -174,18 +169,18 @@ public abstract class ConnectorIntegrationTestBase extends ESBIntegrationTest {
             }
             
         }
-        
+        */
         
         adminServiceStub.updateStatus("{org.wso2.carbon.connector}" + connectorName, connectorName,
                 "org.wso2.carbon.connector", "enabled");
-        */
+        
         connectorProperties = getConnectorConfigProperties(connectorName);
         
         pathToProxiesDirectory = repoLocation + connectorProperties.getProperty("proxyDirectoryRelativePath");
         pathToRequestsDirectory = repoLocation + connectorProperties.getProperty("requestDirectoryRelativePath");
         
         pathToResourcesDirectory = repoLocation + connectorProperties.getProperty("resourceDirectoryRelativePath");
-        
+        /*
         File folder = new File(pathToProxiesDirectory);
         File[] listOfFiles = folder.listFiles();
         for (int i = 0; i < listOfFiles.length; i++) {
@@ -197,37 +192,8 @@ public abstract class ConnectorIntegrationTestBase extends ESBIntegrationTest {
                 }
             }
         }
-        String sequenceDirectoryRelativePath = connectorProperties.getProperty("sequenceDirectoryRelativePath");
-        //if sequence directory relative path is available in properties, add sequences to ESB
-        if (sequenceDirectoryRelativePath != null && !sequenceDirectoryRelativePath.isEmpty()) {
-            pathToSequencesDirectory = repoLocation + sequenceDirectoryRelativePath;
-            SequenceAdminServiceClient sequenceAdmin = 
-                    new SequenceAdminServiceClient(esbServer.getBackEndUrl(), esbServer.getSessionCookie());
-            File sequenceFolder = new File(pathToSequencesDirectory);
-            File[] listOfSequenceFiles = sequenceFolder.listFiles();
-            for (int i = 0; i < listOfSequenceFiles.length; i++) {
-                if (listOfSequenceFiles[i].isFile()) {
-                    String fileName = listOfSequenceFiles[i].getName();
-                    if (fileName.endsWith(".xml") || fileName.endsWith(".XML")) {
-                        sequenceAdmin.addSequence(new DataHandler(new URL("file:///" + pathToSequencesDirectory + fileName)));
-                    }
-                }
-            }
-        }
-
+        */
         proxyUrl = getProxyServiceURL(connectorName);
-        
-    }
-    /**
-     * Method to upload sequences if required from a given path.
-     * @throws XMLStreamException 
-     * @throws IOException 
-     * @throws SequenceEditorException 
-     * @throws MalformedURLException 
-     */
-    public void uploadSequences() throws MalformedURLException, SequenceEditorException, IOException, XMLStreamException {
-        
-        
         
     }
     
@@ -240,7 +206,7 @@ public abstract class ConnectorIntegrationTestBase extends ESBIntegrationTest {
     @AfterClass(alwaysRun = true)
     public void cleanUpEsb() throws RemoteException, ProxyServiceAdminProxyAdminException {
     
-        proxyAdmin.deleteProxy(connectorName);
+        //proxyAdmin.deleteProxy(connectorName);
     }
     
     /**
@@ -367,11 +333,6 @@ public abstract class ConnectorIntegrationTestBase extends ESBIntegrationTest {
         restResponse.setHeadersMap(httpConnection.getHeaderFields());
         
         if (responseString != null) {
-            
-            if(!isValidXML(responseString)){
-                responseString ="<output>" + responseString +"</output>";
-            }
-             
             restResponse.setBody(AXIOMUtil.stringToOM(responseString));
         }
         
@@ -1022,29 +983,10 @@ public abstract class ConnectorIntegrationTestBase extends ESBIntegrationTest {
         }
     }
     
-	/**
-     * Method to validate whether incomming string is parsable as XML.
-     * 
-     * @param xml
-     * @return boolean
-     */
-    private boolean isValidXML(String xml){
-        
-        if (xml != null && xml.trim().length() > 0) {
-            if (xml.trim().startsWith("<")) {
-                
-                return true;
-            }
-            
-        }
-        
-        return false;
-    }
-    
     @Override
     protected void cleanup() {
     
-        axis2Client.destroy();
+        //axis2Client.destroy();
     }
     
     /**

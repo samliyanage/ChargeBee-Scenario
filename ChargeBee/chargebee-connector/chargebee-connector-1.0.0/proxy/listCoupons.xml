@@ -1,19 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<proxy xmlns="http://ws.apache.org/ns/synapse" name="chargebee_listCoupons" transports="https,http" statistics="disable" trace="disable" startOnLoad="true">
-	<target>
-		<inSequence>
-								<property name="limit" expression="json-eval($.limit)" />
-											<property name="offset" expression="json-eval($.offset)" />
-								<chargebee.listCoupons>
-							<limit>{$ctx:limit}</limit>
-							<offset>{$ctx:offset}</offset>
-						</chargebee.listCoupons>
-			<respond />
-		</inSequence>
-		<outSequence>
-			<log />
-			<send />
-		</outSequence>
-	</target>
-	<description />
-</proxy>  
+<proxy xmlns="http://ws.apache.org/ns/synapse" name="chargebee_listCoupons" transports="https,http" statistics="disable"
+   trace="disable" startOnLoad="true">
+   <target>
+      <inSequence>
+         <property name="apiUrl" expression="json-eval($.apiUrl)" />
+         <property name="apiKey" expression="json-eval($.apiKey)" />
+         <property name="limit" expression="json-eval($.limit)" />
+         <property name="offset" expression="json-eval($.offset)" />
+         <chargebee.init>
+            <apiUrl>{$ctx:apiUrl}</apiUrl>
+            <apiKey>{$ctx:apiKey}</apiKey>
+         </chargebee.init>
+         <chargebee.listCoupons>
+            <limit>{$ctx:limit}</limit>
+            <offset>{$ctx:offset}</offset>
+         </chargebee.listCoupons>
+         <respond />
+      </inSequence>
+      <outSequence>
+         <log />
+         <send />
+      </outSequence>
+   </target>
+   <description />
+</proxy>
+

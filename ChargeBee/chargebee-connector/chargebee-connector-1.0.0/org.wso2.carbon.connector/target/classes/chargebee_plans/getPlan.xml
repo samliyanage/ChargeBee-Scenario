@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template name="getPlan" xmlns="http://ws.apache.org/ns/synapse">
+		<parameter name="planId" description="The planId" />
+		<sequence>
+				<property expression="$func:planId" name="uri.var.planId" />
+						<call>
+			<endpoint>
+				<http method="post" uri-template="{uri.var.apiUrl}" />
+			</endpoint>
+		</call>
+	</sequence>
+</template>

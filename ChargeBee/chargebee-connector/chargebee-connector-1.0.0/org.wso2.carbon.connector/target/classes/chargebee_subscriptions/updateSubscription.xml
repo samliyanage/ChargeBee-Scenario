@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template name="updateSubscription" xmlns="http://ws.apache.org/ns/synapse">
+		<parameter name="planId" description="The planId" />
+		<parameter name="planQuantity" description="The planQuantity" />
+		<parameter name="startDate" description="The startDate" />
+		<parameter name="trialEndDate" description="The trialEndDate" />
+		<parameter name="billingCycles" description="The billingCycles" />
+		<parameter name="replaceAddonList" description="The replaceAddonList" />
+		<parameter name="couponId" description="The couponId" />
+		<parameter name="prorate" description="The prorate" />
+		<parameter name="endOfTerm" description="The endOfTerm" />
+		<parameter name="cardGateway" description="The cardGateway" />
+		<parameter name="cardTmpToken" description="The cardTmpToken" />
+		<parameter name="cardFirstName" description="The cardFirstName" />
+		<parameter name="cardLastName" description="The cardLastName" />
+		<parameter name="cardNumber" description="The cardNumber" />
+		<parameter name="cardExpiryMonth" description="The cardExpiryMonth" />
+		<parameter name="cardExpiryYear" description="The cardExpiryYear" />
+		<parameter name="cardCVV" description="The cardCVV" />
+		<parameter name="cardBillingAddress1" description="The cardBillingAddress1" />
+		<parameter name="cardBillingAddress2" description="The cardBillingAddress2" />
+		<parameter name="cardBillingCity" description="The cardBillingCity" />
+		<parameter name="cardBillingStateCode" description="The cardBillingStateCode" />
+		<parameter name="cardBillingState" description="The cardBillingState" />
+		<parameter name="cardBillingZip" description="The cardBillingZip" />
+		<parameter name="cardBillingCountry" description="The cardBillingCountry" />
+		<parameter name="cardIpAddress" description="The cardIpAddress" />
+		<parameter name="billingAddressFirstName" description="The billingAddressFirstName" />
+		<parameter name="billingAddressLastName" description="The billingAddressLastName" />
+		<parameter name="billingAddressEmail" description="The billingAddressEmail" />
+		<parameter name="billingAddressCompanyName" description="The billingAddressCompanyName" />
+		<parameter name="billingAddressPhoneNumber" description="The billingAddressPhoneNumber" />
+		<parameter name="billingAddressLine1" description="The billingAddressLine1" />
+		<parameter name="billingAddressLine2" description="The billingAddressLine2" />
+		<parameter name="billingAddressLine3" description="The billingAddressLine3" />
+		<parameter name="billingAddressCity" description="The billingAddressCity" />
+		<parameter name="billingAddressStateCode" description="The billingAddressStateCode" />
+		<parameter name="billingAddressState" description="The billingAddressState" />
+		<parameter name="billingAddressZip" description="The billingAddressZip" />
+		<parameter name="billingAddressCountry" description="The billingAddressCountry" />
+		<parameter name="shippingAddressFirstName" description="The shippingAddressFirstName" />
+		<parameter name="shippingAddressLastName" description="The shippingAddressLastName" />
+		<parameter name="shippingAddressEmail" description="The shippingAddressEmail" />
+		<parameter name="shippingAddressCompanyName" description="The shippingAddressCompanyName" />
+		<parameter name="shippingAddressPhoneNumber" description="The shippingAddressPhoneNumber" />
+		<parameter name="shippingAddressLine1" description="The shippingAddressLine1" />
+		<parameter name="shippingAddressLine2" description="The shippingAddressLine2" />
+		<parameter name="shippingAddressLine3" description="The shippingAddressLine3" />
+		<parameter name="shippingAddressCity" description="The shippingAddressCity" />
+		<parameter name="shippingAddressStateCode" description="The shippingAddressStateCode" />
+		<parameter name="shippingAddressState" description="The shippingAddressState" />
+		<parameter name="shippingAddressZip" description="The shippingAddressZip" />
+		<parameter name="shippingAddressCountry" description="The shippingAddressCountry" />
+		<parameter name="customerVatNumber" description="The customerVatNumber" />
+		<parameter name="addonIds" description="The addonIds" />
+		<parameter name="addonsQuantity" description="The addonsQuantity" />
+		<sequence>
+				<property expression="$func:planId" name="uri.var.planId" />
+				<property expression="$func:planQuantity" name="uri.var.planQuantity" />
+				<property expression="$func:startDate" name="uri.var.startDate" />
+				<property expression="$func:trialEndDate" name="uri.var.trialEndDate" />
+				<property expression="$func:billingCycles" name="uri.var.billingCycles" />
+				<property expression="$func:replaceAddonList" name="uri.var.replaceAddonList" />
+				<property expression="$func:couponId" name="uri.var.couponId" />
+				<property expression="$func:prorate" name="uri.var.prorate" />
+				<property expression="$func:endOfTerm" name="uri.var.endOfTerm" />
+				<property expression="$func:cardGateway" name="uri.var.cardGateway" />
+				<property expression="$func:cardTmpToken" name="uri.var.cardTmpToken" />
+				<property expression="$func:cardFirstName" name="uri.var.cardFirstName" />
+				<property expression="$func:cardLastName" name="uri.var.cardLastName" />
+				<property expression="$func:cardNumber" name="uri.var.cardNumber" />
+				<property expression="$func:cardExpiryMonth" name="uri.var.cardExpiryMonth" />
+				<property expression="$func:cardExpiryYear" name="uri.var.cardExpiryYear" />
+				<property expression="$func:cardCVV" name="uri.var.cardCVV" />
+				<property expression="$func:cardBillingAddress1" name="uri.var.cardBillingAddress1" />
+				<property expression="$func:cardBillingAddress2" name="uri.var.cardBillingAddress2" />
+				<property expression="$func:cardBillingCity" name="uri.var.cardBillingCity" />
+				<property expression="$func:cardBillingStateCode" name="uri.var.cardBillingStateCode" />
+				<property expression="$func:cardBillingState" name="uri.var.cardBillingState" />
+				<property expression="$func:cardBillingZip" name="uri.var.cardBillingZip" />
+				<property expression="$func:cardBillingCountry" name="uri.var.cardBillingCountry" />
+				<property expression="$func:cardIpAddress" name="uri.var.cardIpAddress" />
+				<property expression="$func:billingAddressFirstName" name="uri.var.billingAddressFirstName" />
+				<property expression="$func:billingAddressLastName" name="uri.var.billingAddressLastName" />
+				<property expression="$func:billingAddressEmail" name="uri.var.billingAddressEmail" />
+				<property expression="$func:billingAddressCompanyName" name="uri.var.billingAddressCompanyName" />
+				<property expression="$func:billingAddressPhoneNumber" name="uri.var.billingAddressPhoneNumber" />
+				<property expression="$func:billingAddressLine1" name="uri.var.billingAddressLine1" />
+				<property expression="$func:billingAddressLine2" name="uri.var.billingAddressLine2" />
+				<property expression="$func:billingAddressLine3" name="uri.var.billingAddressLine3" />
+				<property expression="$func:billingAddressCity" name="uri.var.billingAddressCity" />
+				<property expression="$func:billingAddressStateCode" name="uri.var.billingAddressStateCode" />
+				<property expression="$func:billingAddressState" name="uri.var.billingAddressState" />
+				<property expression="$func:billingAddressZip" name="uri.var.billingAddressZip" />
+				<property expression="$func:billingAddressCountry" name="uri.var.billingAddressCountry" />
+				<property expression="$func:shippingAddressFirstName" name="uri.var.shippingAddressFirstName" />
+				<property expression="$func:shippingAddressLastName" name="uri.var.shippingAddressLastName" />
+				<property expression="$func:shippingAddressEmail" name="uri.var.shippingAddressEmail" />
+				<property expression="$func:shippingAddressCompanyName" name="uri.var.shippingAddressCompanyName" />
+				<property expression="$func:shippingAddressPhoneNumber" name="uri.var.shippingAddressPhoneNumber" />
+				<property expression="$func:shippingAddressLine1" name="uri.var.shippingAddressLine1" />
+				<property expression="$func:shippingAddressLine2" name="uri.var.shippingAddressLine2" />
+				<property expression="$func:shippingAddressLine3" name="uri.var.shippingAddressLine3" />
+				<property expression="$func:shippingAddressCity" name="uri.var.shippingAddressCity" />
+				<property expression="$func:shippingAddressStateCode" name="uri.var.shippingAddressStateCode" />
+				<property expression="$func:shippingAddressState" name="uri.var.shippingAddressState" />
+				<property expression="$func:shippingAddressZip" name="uri.var.shippingAddressZip" />
+				<property expression="$func:shippingAddressCountry" name="uri.var.shippingAddressCountry" />
+				<property expression="$func:customerVatNumber" name="uri.var.customerVatNumber" />
+				<property expression="$func:addonIds" name="uri.var.addonIds" />
+				<property expression="$func:addonsQuantity" name="uri.var.addonsQuantity" />
+						<call>
+			<endpoint>
+				<http method="post" uri-template="{uri.var.apiUrl}" />
+			</endpoint>
+		</call>
+	</sequence>
+</template>

@@ -1,47 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<proxy xmlns="http://ws.apache.org/ns/synapse" name="chargebee_createCoupon" transports="https,http" statistics="disable" trace="disable" startOnLoad="true">
-	<target>
-		<inSequence>
-								<property name="couponId" expression="json-eval($.couponId)" />
-											<property name="couponName" expression="json-eval($.couponName)" />
-											<property name="invoiceName" expression="json-eval($.invoiceName)" />
-											<property name="discountType" expression="json-eval($.discountType)" />
-											<property name="discountAmount" expression="json-eval($.discountAmount)" />
-											<property name="discountPercentage" expression="json-eval($.discountPercentage)" />
-											<property name="discountQuantity" expression="json-eval($.discountQuantity)" />
-											<property name="applyOn" expression="json-eval($.applyOn)" />
-											<property name="planConstraint" expression="json-eval($.planConstraint)" />
-											<property name="addonConstraint" expression="json-eval($.addonConstraint)" />
-											<property name="planIds" expression="json-eval($.planIds)" />
-											<property name="addonIds" expression="json-eval($.addonIds)" />
-											<property name="durationType" expression="json-eval($.durationType)" />
-											<property name="durationMonth" expression="json-eval($.durationMonth)" />
-											<property name="validTill" expression="json-eval($.validTill)" />
-											<property name="maxRedemptions" expression="json-eval($.maxRedemptions)" />
-								<chargebee.createCoupon>
-							<couponId>{$ctx:couponId}</couponId>
-							<couponName>{$ctx:couponName}</couponName>
-							<invoiceName>{$ctx:invoiceName}</invoiceName>
-							<discountType>{$ctx:discountType}</discountType>
-							<discountAmount>{$ctx:discountAmount}</discountAmount>
-							<discountPercentage>{$ctx:discountPercentage}</discountPercentage>
-							<discountQuantity>{$ctx:discountQuantity}</discountQuantity>
-							<applyOn>{$ctx:applyOn}</applyOn>
-							<planConstraint>{$ctx:planConstraint}</planConstraint>
-							<addonConstraint>{$ctx:addonConstraint}</addonConstraint>
-							<planIds>{$ctx:planIds}</planIds>
-							<addonIds>{$ctx:addonIds}</addonIds>
-							<durationType>{$ctx:durationType}</durationType>
-							<durationMonth>{$ctx:durationMonth}</durationMonth>
-							<validTill>{$ctx:validTill}</validTill>
-							<maxRedemptions>{$ctx:maxRedemptions}</maxRedemptions>
-						</chargebee.createCoupon>
-			<respond />
-		</inSequence>
-		<outSequence>
-			<log />
-			<send />
-		</outSequence>
-	</target>
-	<description />
+<proxy xmlns="http://ws.apache.org/ns/synapse" name="chargebee_createCoupon" transports="https,http" statistics="disable"
+   trace="disable" startOnLoad="true">
+   <target>
+      <inSequence>
+         <property name="apiUrl" expression="json-eval($.apiUrl)" />
+         <property name="apiKey" expression="json-eval($.apiKey)" />
+         <property name="couponId" expression="json-eval($.couponId)" />
+         <property name="couponName" expression="json-eval($.couponName)" />
+         <property name="invoiceName" expression="json-eval($.invoiceName)" />
+         <property name="discountType" expression="json-eval($.discountType)" />
+         <property name="discountAmount" expression="json-eval($.discountAmount)" />
+         <property name="discountPercentage" expression="json-eval($.discountPercentage)" />
+         <property name="discountQuantity" expression="json-eval($.discountQuantity)" />
+         <property name="applyOn" expression="json-eval($.applyOn)" />
+         <property name="planConstraint" expression="json-eval($.planConstraint)" />
+         <property name="addonConstraint" expression="json-eval($.addonConstraint)" />
+         <property name="planIds" expression="json-eval($.planIds)" />
+         <property name="addonIds" expression="json-eval($.addonIds)" />
+         <property name="durationType" expression="json-eval($.durationType)" />
+         <property name="durationMonth" expression="json-eval($.durationMonth)" />
+         <property name="validTill" expression="json-eval($.validTill)" />
+         <property name="maxRedemptions" expression="json-eval($.maxRedemptions)" />
+         <property name="invoiceNotes" expression="json-eval($.invoiceNotes)" />
+         <chargebee.init>
+            <apiUrl>{$ctx:apiUrl}</apiUrl>
+            <apiKey>{$ctx:apiKey}</apiKey>
+         </chargebee.init>
+         <chargebee.createCoupon>
+            <couponId>{$ctx:couponId}</couponId>
+            <couponName>{$ctx:couponName}</couponName>
+            <invoiceName>{$ctx:invoiceName}</invoiceName>
+            <discountType>{$ctx:discountType}</discountType>
+            <discountAmount>{$ctx:discountAmount}</discountAmount>
+            <discountPercentage>{$ctx:discountPercentage}</discountPercentage>
+            <discountQuantity>{$ctx:discountQuantity}</discountQuantity>
+            <applyOn>{$ctx:applyOn}</applyOn>
+            <planConstraint>{$ctx:planConstraint}</planConstraint>
+            <addonConstraint>{$ctx:addonConstraint}</addonConstraint>
+            <planIds>{$ctx:planIds}</planIds>
+            <addonIds>{$ctx:addonIds}</addonIds>
+            <durationType>{$ctx:durationType}</durationType>
+            <durationMonth>{$ctx:durationMonth}</durationMonth>
+            <validTill>{$ctx:validTill}</validTill>
+            <maxRedemptions>{$ctx:maxRedemptions}</maxRedemptions>
+            <invoiceNotes>{$ctx:invoiceNotes}</invoiceNotes>
+         </chargebee.createCoupon>
+         <respond />
+      </inSequence>
+      <outSequence>
+         <log />
+         <send />
+      </outSequence>
+   </target>
+   <description />
 </proxy>  

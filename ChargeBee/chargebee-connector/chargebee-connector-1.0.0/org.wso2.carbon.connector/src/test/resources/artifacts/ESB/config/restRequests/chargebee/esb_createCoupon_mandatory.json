@@ -1,0 +1,10 @@
+{
+    "apiUrl": "",
+    "apiKey": "",
+    "couponId": "",
+    "couponName": "",
+    "discountType": "fixed_amount",
+    "applyOn": "each_specified_item",
+    "discountAmount": ""
+    
+}

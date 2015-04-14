@@ -1,3 +1,5 @@
 {
-	"couponId" : "",
+   "apiUrl" : "https://virasoft-test.chargebee.com",
+   "apiKey" : "test_FcdtRk15eZMFlv0yz5VSjcdNBukdmriWsW",
+   "couponId" : "early_bird_offer"
 }
