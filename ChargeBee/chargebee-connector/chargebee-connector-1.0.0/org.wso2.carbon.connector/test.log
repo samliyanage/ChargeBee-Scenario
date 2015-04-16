@@ -1,0 +1,373 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.wso2.carbon.connector:org.wso2.carbon.connector.chargebee:jar:1.0.0
+[WARNING] 'artifactId' contains an expression but should be a constant. @ org.wso2.carbon.connector:org.wso2.carbon.connector.${connector.name}:${connector.version}, /Users/sampathliyanage/Documents/ChargeBee-Scenario/ChargeBee/chargebee-connector/chargebee-connector-1.0.0/org.wso2.carbon.connector/pom.xml, line 33, column 16
+[WARNING] 'version' contains an expression but should be a constant. @ org.wso2.carbon.connector:org.wso2.carbon.connector.${connector.name}:${connector.version}, /Users/sampathliyanage/Documents/ChargeBee-Scenario/ChargeBee/chargebee-connector/chargebee-connector-1.0.0/org.wso2.carbon.connector/pom.xml, line 34, column 13
+[WARNING] 'build.plugins.plugin.(groupId:artifactId)' must be unique but found duplicate declaration of plugin org.apache.maven.plugins:maven-dependency-plugin @ org.wso2.carbon.connector:org.wso2.carbon.connector.${connector.name}:${connector.version}, /Users/sampathliyanage/Documents/ChargeBee-Scenario/ChargeBee/chargebee-connector/chargebee-connector-1.0.0/org.wso2.carbon.connector/pom.xml, line 169, column 18
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building WSO2 Carbon - Mediation Library Connector For chargebee 1.0.0
+[INFO] ------------------------------------------------------------------------
+[WARNING] The POM for org.apache.bsf:bsf-all:jar:3.0 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+[WARNING] The POM for org.eclipse.equinox:org.eclipse.equinox.http.servlet:jar:1.0.200.v20090520-1800 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+[WARNING] The POM for org.eclipse.osgi:org.eclipse.osgi.services:jar:3.2.0.v20090520-1800 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+[WARNING] The POM for org.eclipse.equinox:org.eclipse.equinox.simpleconfigurator:jar:1.0.100.v20090520-1905 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+[WARNING] The POM for org.eclipse.equinox:org.eclipse.equinox.util:jar:1.0.100.v20090520-1800 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+[WARNING] The POM for org.eclipse.equinox:org.eclipse.equinox.ds:jar:1.1.0.v20090520-1800 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+[WARNING] The POM for org.eclipse.equinox:org.eclipse.equinox.jsp.jasper:jar:1.0.200.v20090520-1800 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+[WARNING] The POM for org.eclipse.equinox:javax.servlet.jsp:jar:2.0.0.v200806031607 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+[WARNING] The POM for org.eclipse.equinox:org.apache.jasper:jar:5.5.17.v200806031609 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+[WARNING] The POM for org.eclipse.equinox:org.apache.commons.el:jar:1.0.0.v200806031608 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+[WARNING] The POM for org.eclipse.equinox:org.eclipse.equinox.app:jar:1.2.0.v20090520-1800 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+[WARNING] The POM for org.eclipse.equinox:org.eclipse.equinox.concurrent:jar:1.0.0.v20090520-1800 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+[WARNING] The POM for org.eclipse.equinox:org.eclipse.equinox.frameworkadmin:jar:1.0.100.v20090520-1905 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+[WARNING] The POM for org.eclipse.equinox:org.eclipse.equinox.frameworkadmin.equinox:jar:1.0.100.v20090520-1905 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+[WARNING] The POM for org.eclipse.equinox:org.eclipse.equinox.p2.artifact.repository:jar:1.0.100.v20090520-1905 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+[WARNING] The POM for org.eclipse.equinox:org.eclipse.equinox.p2.core:jar:1.0.100.v20090520-1905 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+[WARNING] The POM for org.eclipse.equinox:org.eclipse.equinox.p2.director:jar:1.0.100.v20090520-1905 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+[WARNING] The POM for org.eclipse.equinox:org.eclipse.equinox.p2.director.app:jar:1.0.100.v20090521-1912 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+[WARNING] The POM for org.eclipse.equinox:org.eclipse.equinox.p2.directorywatcher:jar:1.0.100.v20090520-1905 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+[WARNING] The POM for org.eclipse.equinox:org.eclipse.equinox.p2.engine:jar:1.0.100.v20090520-1905 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+[WARNING] The POM for org.eclipse.equinox:org.eclipse.equinox.p2.exemplarysetup:jar:1.0.100.v20090520-1905 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+[WARNING] The POM for org.eclipse.equinox:org.eclipse.equinox.p2.extensionlocation:jar:1.0.100.v20090520-1905 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+[WARNING] The POM for org.eclipse.equinox:org.eclipse.equinox.p2.garbagecollector:jar:1.0.100.v20090520-1905 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+[WARNING] The POM for org.eclipse.equinox:org.eclipse.equinox.p2.jarprocessor:jar:1.0.100.v20090520-1905 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+[WARNING] The POM for org.eclipse.equinox:org.eclipse.equinox.p2.metadata.generator:jar:1.0.100.v20090520-1905 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+[WARNING] The POM for org.eclipse.equinox:org.eclipse.equinox.p2.metadata:jar:1.0.100.v20090520-1905 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+[WARNING] The POM for org.eclipse.equinox:org.eclipse.equinox.p2.metadata.repository:jar:1.0.100.v20090520-1905 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+[WARNING] The POM for org.eclipse.equinox:org.eclipse.equinox.p2.reconciler.dropins:jar:1.0.100.v20090520-1905 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+[WARNING] The POM for org.eclipse.equinox:org.eclipse.equinox.p2.publisher:jar:1.0.0.v20090521-1912 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+[WARNING] The POM for org.eclipse.equinox:org.eclipse.equinox.p2.repository.tools:jar:1.0.0.v20090520-1905 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+[WARNING] The POM for org.eclipse.equinox:org.eclipse.equinox.p2.repository:jar:1.0.0.v20090520-1905 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+[WARNING] The POM for org.eclipse.equinox:org.eclipse.equinox.p2.touchpoint.natives:jar:1.0.100.v20090520-1905 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+[WARNING] The POM for org.eclipse.equinox:org.eclipse.equinox.p2.updatechecker:jar:1.1.0.v20090520-1905 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+[WARNING] The POM for org.eclipse.equinox:org.eclipse.equinox.preferences:jar:3.2.300.v20090520-1800 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+[WARNING] The POM for org.eclipse.equinox:org.eclipse.equinox.security:jar:1.0.100.v20090520-1800 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+[WARNING] The POM for org.eclipse.equinox:org.eclipse.equinox.simpleconfigurator.manipulator:jar:1.0.100.v20090520-1905 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+[WARNING] The POM for org.eclipse.equinox:org.eclipse.equinox.p2.updatesite:jar:1.0.100.v20090520-1905 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+[WARNING] The POM for org.eclipse.core:org.eclipse.core.commands:jar:3.5.0.I20090429-1800 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+[WARNING] The POM for org.eclipse.core:org.eclipse.core.contenttype:jar:3.4.0.v20090429-1800 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+[WARNING] The POM for org.eclipse.core:org.eclipse.core.expressions:jar:3.4.100.v20090429-1800 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+[WARNING] The POM for org.eclipse.core:org.eclipse.core.net:jar:1.2.0.I20090522-1010 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+[WARNING] The POM for org.eclipse.core:org.eclipse.core.runtime.compatibility.auth:jar:3.2.100.v20090413 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+[WARNING] The POM for org.eclipse.ecf:org.eclipse.ecf:jar:3.0.0.v20090520-0800 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+[WARNING] The POM for org.eclipse.ecf:org.eclipse.ecf.filetransfer:jar:3.0.0.v20090520-0800 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+[WARNING] The POM for org.eclipse.ecf:org.eclipse.ecf.identity:jar:3.0.0.v20090520-0800 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+[WARNING] The POM for org.eclipse.ecf:org.eclipse.ecf.provider.filetransfer:jar:3.0.0.v20090520-0800 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+[WARNING] The POM for org.eclipse:org.sat4j.core:jar:2.1.0.v20090520 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+[WARNING] The POM for org.eclipse:org.sat4j.pb:jar:2.1.0.v20090520 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+[WARNING] The POM for org.eclipse:com.ibm.icu:jar:4.0.1.v20090415 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ org.wso2.carbon.connector.chargebee ---
+[INFO] Deleting /Users/sampathliyanage/Documents/ChargeBee-Scenario/ChargeBee/chargebee-connector/chargebee-connector-1.0.0/org.wso2.carbon.connector/target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ org.wso2.carbon.connector.chargebee ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 25 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.0:compile (default-compile) @ org.wso2.carbon.connector.chargebee ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:copy-dependencies (copy-emma-dependencies) @ org.wso2.carbon.connector.chargebee ---
+[INFO] Copying org.wso2.carbon.automation.core-4.2.0.jar to /Users/sampathliyanage/Documents/ChargeBee-Scenario/ChargeBee/chargebee-connector/chargebee-connector-1.0.0/org.wso2.carbon.connector/target/emma/org.wso2.carbon.automation.core-4.2.0.jar
+[INFO] Copying emma-2.1.5320.jar to /Users/sampathliyanage/Documents/ChargeBee-Scenario/ChargeBee/chargebee-connector/chargebee-connector-1.0.0/org.wso2.carbon.connector/target/emma/emma-2.1.5320.jar
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:copy-dependencies (copy-jar-dependencies) @ org.wso2.carbon.connector.chargebee ---
+[INFO] jruby-complete-1.3.0.jar already exists in destination.
+[INFO] geronimo-j2ee-management_1.1_spec-1.0.1.jar already exists in destination.
+[INFO] geronimo-jms_1.1_spec-1.1.1.jar already exists in destination.
+[INFO] mysql-connector-java-5.1.6.jar already exists in destination.
+[INFO] groovy-all-1.1-rc-1.jar already exists in destination.
+[INFO] activemq-core-5.2.0.jar already exists in destination.
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:copy-dependencies (copy-secVerifier) @ org.wso2.carbon.connector.chargebee ---
+[INFO] Copying SecVerifier-4.2.0.aar to /Users/sampathliyanage/Documents/ChargeBee-Scenario/ChargeBee/chargebee-connector/chargebee-connector-1.0.0/org.wso2.carbon.connector/target/security-verifier/SecVerifier.aar
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:unpack (unpack-mar-jks) @ org.wso2.carbon.connector.chargebee ---
+[INFO] Configured Artifact: org.wso2.esb:wso2esb:4.8.1:zip
+[INFO] Unpacking /Users/sampathliyanage/.m2/repository/org/wso2/esb/wso2esb/4.8.1/wso2esb-4.8.1.zip to /Users/sampathliyanage/Documents/ChargeBee-Scenario/ChargeBee/chargebee-connector/chargebee-connector-1.0.0/org.wso2.carbon.connector/target/tobeCopied with includes "**/*.jks,**/*.mar,**/synapse_sample*.xml" and excludes ""
+[INFO] 
+[INFO] --- maven-assembly-plugin:2.2-beta-5:attached (email-library) @ org.wso2.carbon.connector.chargebee ---
+[INFO] Reading assembly descriptor: src/main/assembly/assemble-connector.xml
+[INFO] Building zip: /Users/sampathliyanage/Documents/ChargeBee-Scenario/ChargeBee/chargebee-connector/chargebee-connector-1.0.0/org.wso2.carbon.connector/target/chargebee-connector-1.0.0.zip
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:copy-resources (copy-resources-jks) @ org.wso2.carbon.connector.chargebee ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 2 resources
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:copy-resources (copy-stratos-jks) @ org.wso2.carbon.connector.chargebee ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 2 resources
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:copy-resources (copy-sample-jks) @ org.wso2.carbon.connector.chargebee ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:copy-resources (copy-resources-mar) @ org.wso2.carbon.connector.chargebee ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 2 resources
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:copy-resources (copy-samples) @ org.wso2.carbon.connector.chargebee ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 111 resources
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:copy (copy) @ org.wso2.carbon.connector.chargebee ---
+[INFO] Configured Artifact: org.apache.commons:commons-email:1.2:jar
+[INFO] Copying commons-email-1.2.jar to /Users/sampathliyanage/Documents/ChargeBee-Scenario/ChargeBee/chargebee-connector/chargebee-connector-1.0.0/org.wso2.carbon.connector/target/connector/dependencies/commons-email-1.2.jar
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ org.wso2.carbon.connector.chargebee ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 142 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.0:testCompile (default-testCompile) @ org.wso2.carbon.connector.chargebee ---
+Compiling 1 source file to /Users/sampathliyanage/Documents/ChargeBee-Scenario/ChargeBee/chargebee-connector/chargebee-connector-1.0.0/org.wso2.carbon.connector/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ org.wso2.carbon.connector.chargebee ---
+[INFO] Surefire report directory: /Users/sampathliyanage/Documents/ChargeBee-Scenario/ChargeBee/chargebee-connector/chargebee-connector-1.0.0/org.wso2.carbon.connector/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running TestSuite
+[2015-04-16 13:02:32,310]  INFO {org.wso2.carbon.automation.core.PlatformExecutionManager} -  ---------------Test Execution Started --------------------------
+[2015-04-16 13:02:32,326]  INFO {org.wso2.carbon.automation.core.ServerGroupManager} -  Carbon zip file - /Users/sampathliyanage/Documents/ChargeBee-Scenario/ChargeBee/chargebee-connector/chargebee-connector-1.0.0/org.wso2.carbon.connector/repository/wso2esb-4.8.1.zip
+[2015-04-16 13:02:32,345] ERROR {org.wso2.carbon.automation.core.utils.fileutils.ArchiveExtractor} -  Error on archive extraction 
+java.io.FileNotFoundException: /Users/sampathliyanage/Documents/ChargeBee-Scenario/ChargeBee/chargebee-connector/chargebee-connector-1.0.0/org.wso2.carbon.connector/repository/wso2esb-4.8.1.zip (No such file or directory)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:146)
+	at java.io.FileInputStream.<init>(FileInputStream.java:101)
+	at org.wso2.carbon.automation.core.utils.fileutils.ArchiveExtractor.extractFile(ArchiveExtractor.java:43)
+	at org.wso2.carbon.automation.core.utils.serverutils.ServerUtils.setUpCarbonHome(ServerUtils.java:177)
+	at org.wso2.carbon.automation.core.ServerGroupManager.startServer(ServerGroupManager.java:84)
+	at org.wso2.carbon.automation.core.ServerGroupManager.startServersForBuilder(ServerGroupManager.java:98)
+	at org.wso2.carbon.automation.core.PlatformExecutionManager.startSevers(PlatformExecutionManager.java:187)
+	at org.wso2.carbon.automation.core.PlatformExecutionManager.onExecutionStart(PlatformExecutionManager.java:76)
+	at org.testng.TestNG.runExecutionListeners(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:983)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:178)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:92)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:96)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+[2015-04-16 13:02:32,347] ERROR {org.wso2.carbon.automation.core.PlatformExecutionManager} -  Unable to start servers 
+java.io.IOException: Error on archive extraction 
+	at org.wso2.carbon.automation.core.utils.fileutils.ArchiveExtractor.extractFile(ArchiveExtractor.java:85)
+	at org.wso2.carbon.automation.core.utils.serverutils.ServerUtils.setUpCarbonHome(ServerUtils.java:177)
+	at org.wso2.carbon.automation.core.ServerGroupManager.startServer(ServerGroupManager.java:84)
+	at org.wso2.carbon.automation.core.ServerGroupManager.startServersForBuilder(ServerGroupManager.java:98)
+	at org.wso2.carbon.automation.core.PlatformExecutionManager.startSevers(PlatformExecutionManager.java:187)
+	at org.wso2.carbon.automation.core.PlatformExecutionManager.onExecutionStart(PlatformExecutionManager.java:76)
+	at org.testng.TestNG.runExecutionListeners(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:983)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:178)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:92)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:96)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: java.io.FileNotFoundException: /Users/sampathliyanage/Documents/ChargeBee-Scenario/ChargeBee/chargebee-connector/chargebee-connector-1.0.0/org.wso2.carbon.connector/repository/wso2esb-4.8.1.zip (No such file or directory)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:146)
+	at java.io.FileInputStream.<init>(FileInputStream.java:101)
+	at org.wso2.carbon.automation.core.utils.fileutils.ArchiveExtractor.extractFile(ArchiveExtractor.java:43)
+	... 19 more
+[2015-04-16 13:02:32,690]  INFO {org.wso2.carbon.automation.core.PlatformSuiteManager} -  **********Starting executing test Suite ESBTestSuite on user***********
+[2015-04-16 13:02:32,693]  INFO {org.wso2.carbon.automation.core.UserPopulator} -  Populating Users....
+[2015-04-16 13:02:33,228]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: wso2caching-4.2.0 - file:/Users/sampathliyanage/.m2/repository/org/wso2/carbon/org.wso2.carbon.caching.core/4.2.0/org.wso2.carbon.caching.core-4.2.0.jar
+[2015-04-16 13:02:33,228]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: wso2caching-4.2.0 - file:/Users/sampathliyanage/.m2/repository/org/wso2/carbon/org.wso2.carbon.caching.core/4.2.0/org.wso2.carbon.caching.core-4.2.0.jar
+[2015-04-16 13:02:33,235]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: ComponentMgtModule-4.2.0 - file:/Users/sampathliyanage/.m2/repository/org/wso2/carbon/org.wso2.carbon.feature.mgt.services/4.2.0/org.wso2.carbon.feature.mgt.services-4.2.0.jar
+[2015-04-16 13:02:33,235]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: ComponentMgtModule-4.2.0 - file:/Users/sampathliyanage/.m2/repository/org/wso2/carbon/org.wso2.carbon.feature.mgt.services/4.2.0/org.wso2.carbon.feature.mgt.services-4.2.0.jar
+[2015-04-16 13:02:33,273]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: rampart - file:/Users/sampathliyanage/.m2/repository/org/apache/rampart/wso2/rampart-core/1.6.1.wso2v9/rampart-core-1.6.1.wso2v9.jar
+[2015-04-16 13:02:33,273]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: rampart - file:/Users/sampathliyanage/.m2/repository/org/apache/rampart/wso2/rampart-core/1.6.1.wso2v9/rampart-core-1.6.1.wso2v9.jar
+[2015-04-16 13:02:33,289]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: rahas - file:/Users/sampathliyanage/.m2/repository/org/apache/rampart/wso2/rampart-trust/1.6.1.wso2v9/rampart-trust-1.6.1.wso2v9.jar
+[2015-04-16 13:02:33,289]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: rahas - file:/Users/sampathliyanage/.m2/repository/org/apache/rampart/wso2/rampart-trust/1.6.1.wso2v9/rampart-trust-1.6.1.wso2v9.jar
+[2015-04-16 13:02:33,308]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: uddiversionmodule-4.2.0 - file:/Users/sampathliyanage/.m2/repository/org/wso2/carbon/org.wso2.carbon.registry.uddi/4.2.0/org.wso2.carbon.registry.uddi-4.2.0.jar
+[2015-04-16 13:02:33,308]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: uddiversionmodule-4.2.0 - file:/Users/sampathliyanage/.m2/repository/org/wso2/carbon/org.wso2.carbon.registry.uddi/4.2.0/org.wso2.carbon.registry.uddi-4.2.0.jar
+[2015-04-16 13:02:33,314]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: pagination-4.2.0 - file:/Users/sampathliyanage/.m2/repository/org/wso2/carbon/org.wso2.carbon.registry.server/4.2.0/org.wso2.carbon.registry.server-4.2.0.jar
+[2015-04-16 13:02:33,314]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: pagination-4.2.0 - file:/Users/sampathliyanage/.m2/repository/org/wso2/carbon/org.wso2.carbon.registry.server/4.2.0/org.wso2.carbon.registry.server-4.2.0.jar
+[2015-04-16 13:02:34,731]  INFO {org.wso2.carbon.automation.api.clients.authenticators.AuthenticatorClient} -  Login Successful
+[2015-04-16 13:02:34,783]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: wso2caching-4.2.0 - file:/Users/sampathliyanage/.m2/repository/org/wso2/carbon/org.wso2.carbon.caching.core/4.2.0/org.wso2.carbon.caching.core-4.2.0.jar
+[2015-04-16 13:02:34,783]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: wso2caching-4.2.0 - file:/Users/sampathliyanage/.m2/repository/org/wso2/carbon/org.wso2.carbon.caching.core/4.2.0/org.wso2.carbon.caching.core-4.2.0.jar
+[2015-04-16 13:02:34,788]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: ComponentMgtModule-4.2.0 - file:/Users/sampathliyanage/.m2/repository/org/wso2/carbon/org.wso2.carbon.feature.mgt.services/4.2.0/org.wso2.carbon.feature.mgt.services-4.2.0.jar
+[2015-04-16 13:02:34,788]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: ComponentMgtModule-4.2.0 - file:/Users/sampathliyanage/.m2/repository/org/wso2/carbon/org.wso2.carbon.feature.mgt.services/4.2.0/org.wso2.carbon.feature.mgt.services-4.2.0.jar
+[2015-04-16 13:02:34,799]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: rampart - file:/Users/sampathliyanage/.m2/repository/org/apache/rampart/wso2/rampart-core/1.6.1.wso2v9/rampart-core-1.6.1.wso2v9.jar
+[2015-04-16 13:02:34,799]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: rampart - file:/Users/sampathliyanage/.m2/repository/org/apache/rampart/wso2/rampart-core/1.6.1.wso2v9/rampart-core-1.6.1.wso2v9.jar
+[2015-04-16 13:02:34,808]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: rahas - file:/Users/sampathliyanage/.m2/repository/org/apache/rampart/wso2/rampart-trust/1.6.1.wso2v9/rampart-trust-1.6.1.wso2v9.jar
+[2015-04-16 13:02:34,808]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: rahas - file:/Users/sampathliyanage/.m2/repository/org/apache/rampart/wso2/rampart-trust/1.6.1.wso2v9/rampart-trust-1.6.1.wso2v9.jar
+[2015-04-16 13:02:34,823]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: uddiversionmodule-4.2.0 - file:/Users/sampathliyanage/.m2/repository/org/wso2/carbon/org.wso2.carbon.registry.uddi/4.2.0/org.wso2.carbon.registry.uddi-4.2.0.jar
+[2015-04-16 13:02:34,823]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: uddiversionmodule-4.2.0 - file:/Users/sampathliyanage/.m2/repository/org/wso2/carbon/org.wso2.carbon.registry.uddi/4.2.0/org.wso2.carbon.registry.uddi-4.2.0.jar
+[2015-04-16 13:02:34,826]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: pagination-4.2.0 - file:/Users/sampathliyanage/.m2/repository/org/wso2/carbon/org.wso2.carbon.registry.server/4.2.0/org.wso2.carbon.registry.server-4.2.0.jar
+[2015-04-16 13:02:34,826]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: pagination-4.2.0 - file:/Users/sampathliyanage/.m2/repository/org/wso2/carbon/org.wso2.carbon.registry.server/4.2.0/org.wso2.carbon.registry.server-4.2.0.jar
+[2015-04-16 13:02:34,840]  INFO {org.wso2.carbon.automation.core.UserPopulator} -  Populate user to ESB server
+[2015-04-16 13:02:34,865]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: wso2caching-4.2.0 - file:/Users/sampathliyanage/.m2/repository/org/wso2/carbon/org.wso2.carbon.caching.core/4.2.0/org.wso2.carbon.caching.core-4.2.0.jar
+[2015-04-16 13:02:34,865]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: wso2caching-4.2.0 - file:/Users/sampathliyanage/.m2/repository/org/wso2/carbon/org.wso2.carbon.caching.core/4.2.0/org.wso2.carbon.caching.core-4.2.0.jar
+[2015-04-16 13:02:34,871]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: ComponentMgtModule-4.2.0 - file:/Users/sampathliyanage/.m2/repository/org/wso2/carbon/org.wso2.carbon.feature.mgt.services/4.2.0/org.wso2.carbon.feature.mgt.services-4.2.0.jar
+[2015-04-16 13:02:34,871]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: ComponentMgtModule-4.2.0 - file:/Users/sampathliyanage/.m2/repository/org/wso2/carbon/org.wso2.carbon.feature.mgt.services/4.2.0/org.wso2.carbon.feature.mgt.services-4.2.0.jar
+[2015-04-16 13:02:34,883]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: rampart - file:/Users/sampathliyanage/.m2/repository/org/apache/rampart/wso2/rampart-core/1.6.1.wso2v9/rampart-core-1.6.1.wso2v9.jar
+[2015-04-16 13:02:34,883]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: rampart - file:/Users/sampathliyanage/.m2/repository/org/apache/rampart/wso2/rampart-core/1.6.1.wso2v9/rampart-core-1.6.1.wso2v9.jar
+[2015-04-16 13:02:34,892]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: rahas - file:/Users/sampathliyanage/.m2/repository/org/apache/rampart/wso2/rampart-trust/1.6.1.wso2v9/rampart-trust-1.6.1.wso2v9.jar
+[2015-04-16 13:02:34,892]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: rahas - file:/Users/sampathliyanage/.m2/repository/org/apache/rampart/wso2/rampart-trust/1.6.1.wso2v9/rampart-trust-1.6.1.wso2v9.jar
+[2015-04-16 13:02:34,905]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: uddiversionmodule-4.2.0 - file:/Users/sampathliyanage/.m2/repository/org/wso2/carbon/org.wso2.carbon.registry.uddi/4.2.0/org.wso2.carbon.registry.uddi-4.2.0.jar
+[2015-04-16 13:02:34,905]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: uddiversionmodule-4.2.0 - file:/Users/sampathliyanage/.m2/repository/org/wso2/carbon/org.wso2.carbon.registry.uddi/4.2.0/org.wso2.carbon.registry.uddi-4.2.0.jar
+[2015-04-16 13:02:34,907]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: pagination-4.2.0 - file:/Users/sampathliyanage/.m2/repository/org/wso2/carbon/org.wso2.carbon.registry.server/4.2.0/org.wso2.carbon.registry.server-4.2.0.jar
+[2015-04-16 13:02:34,907]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: pagination-4.2.0 - file:/Users/sampathliyanage/.m2/repository/org/wso2/carbon/org.wso2.carbon.registry.server/4.2.0/org.wso2.carbon.registry.server-4.2.0.jar
+[2015-04-16 13:02:34,927]  INFO {org.wso2.carbon.automation.api.clients.authenticators.AuthenticatorClient} -  Login Successful
+[2015-04-16 13:02:34,981]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: wso2caching-4.2.0 - file:/Users/sampathliyanage/.m2/repository/org/wso2/carbon/org.wso2.carbon.caching.core/4.2.0/org.wso2.carbon.caching.core-4.2.0.jar
+[2015-04-16 13:02:34,981]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: wso2caching-4.2.0 - file:/Users/sampathliyanage/.m2/repository/org/wso2/carbon/org.wso2.carbon.caching.core/4.2.0/org.wso2.carbon.caching.core-4.2.0.jar
+[2015-04-16 13:02:34,984]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: ComponentMgtModule-4.2.0 - file:/Users/sampathliyanage/.m2/repository/org/wso2/carbon/org.wso2.carbon.feature.mgt.services/4.2.0/org.wso2.carbon.feature.mgt.services-4.2.0.jar
+[2015-04-16 13:02:34,984]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: ComponentMgtModule-4.2.0 - file:/Users/sampathliyanage/.m2/repository/org/wso2/carbon/org.wso2.carbon.feature.mgt.services/4.2.0/org.wso2.carbon.feature.mgt.services-4.2.0.jar
+[2015-04-16 13:02:34,995]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: rampart - file:/Users/sampathliyanage/.m2/repository/org/apache/rampart/wso2/rampart-core/1.6.1.wso2v9/rampart-core-1.6.1.wso2v9.jar
+[2015-04-16 13:02:34,995]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: rampart - file:/Users/sampathliyanage/.m2/repository/org/apache/rampart/wso2/rampart-core/1.6.1.wso2v9/rampart-core-1.6.1.wso2v9.jar
+[2015-04-16 13:02:35,004]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: rahas - file:/Users/sampathliyanage/.m2/repository/org/apache/rampart/wso2/rampart-trust/1.6.1.wso2v9/rampart-trust-1.6.1.wso2v9.jar
+[2015-04-16 13:02:35,004]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: rahas - file:/Users/sampathliyanage/.m2/repository/org/apache/rampart/wso2/rampart-trust/1.6.1.wso2v9/rampart-trust-1.6.1.wso2v9.jar
+[2015-04-16 13:02:35,014]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: uddiversionmodule-4.2.0 - file:/Users/sampathliyanage/.m2/repository/org/wso2/carbon/org.wso2.carbon.registry.uddi/4.2.0/org.wso2.carbon.registry.uddi-4.2.0.jar
+[2015-04-16 13:02:35,014]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: uddiversionmodule-4.2.0 - file:/Users/sampathliyanage/.m2/repository/org/wso2/carbon/org.wso2.carbon.registry.uddi/4.2.0/org.wso2.carbon.registry.uddi-4.2.0.jar
+[2015-04-16 13:02:35,017]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: pagination-4.2.0 - file:/Users/sampathliyanage/.m2/repository/org/wso2/carbon/org.wso2.carbon.registry.server/4.2.0/org.wso2.carbon.registry.server-4.2.0.jar
+[2015-04-16 13:02:35,017]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: pagination-4.2.0 - file:/Users/sampathliyanage/.m2/repository/org/wso2/carbon/org.wso2.carbon.registry.server/4.2.0/org.wso2.carbon.registry.server-4.2.0.jar
+[2015-04-16 13:02:35,056]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: wso2caching-4.2.0 - file:/Users/sampathliyanage/.m2/repository/org/wso2/carbon/org.wso2.carbon.caching.core/4.2.0/org.wso2.carbon.caching.core-4.2.0.jar
+[2015-04-16 13:02:35,056]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: wso2caching-4.2.0 - file:/Users/sampathliyanage/.m2/repository/org/wso2/carbon/org.wso2.carbon.caching.core/4.2.0/org.wso2.carbon.caching.core-4.2.0.jar
+[2015-04-16 13:02:35,059]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: ComponentMgtModule-4.2.0 - file:/Users/sampathliyanage/.m2/repository/org/wso2/carbon/org.wso2.carbon.feature.mgt.services/4.2.0/org.wso2.carbon.feature.mgt.services-4.2.0.jar
+[2015-04-16 13:02:35,059]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: ComponentMgtModule-4.2.0 - file:/Users/sampathliyanage/.m2/repository/org/wso2/carbon/org.wso2.carbon.feature.mgt.services/4.2.0/org.wso2.carbon.feature.mgt.services-4.2.0.jar
+[2015-04-16 13:02:35,068]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: rampart - file:/Users/sampathliyanage/.m2/repository/org/apache/rampart/wso2/rampart-core/1.6.1.wso2v9/rampart-core-1.6.1.wso2v9.jar
+[2015-04-16 13:02:35,068]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: rampart - file:/Users/sampathliyanage/.m2/repository/org/apache/rampart/wso2/rampart-core/1.6.1.wso2v9/rampart-core-1.6.1.wso2v9.jar
+[2015-04-16 13:02:35,078]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: rahas - file:/Users/sampathliyanage/.m2/repository/org/apache/rampart/wso2/rampart-trust/1.6.1.wso2v9/rampart-trust-1.6.1.wso2v9.jar
+[2015-04-16 13:02:35,078]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: rahas - file:/Users/sampathliyanage/.m2/repository/org/apache/rampart/wso2/rampart-trust/1.6.1.wso2v9/rampart-trust-1.6.1.wso2v9.jar
+[2015-04-16 13:02:35,088]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: uddiversionmodule-4.2.0 - file:/Users/sampathliyanage/.m2/repository/org/wso2/carbon/org.wso2.carbon.registry.uddi/4.2.0/org.wso2.carbon.registry.uddi-4.2.0.jar
+[2015-04-16 13:02:35,088]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: uddiversionmodule-4.2.0 - file:/Users/sampathliyanage/.m2/repository/org/wso2/carbon/org.wso2.carbon.registry.uddi/4.2.0/org.wso2.carbon.registry.uddi-4.2.0.jar
+[2015-04-16 13:02:35,092]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: pagination-4.2.0 - file:/Users/sampathliyanage/.m2/repository/org/wso2/carbon/org.wso2.carbon.registry.server/4.2.0/org.wso2.carbon.registry.server-4.2.0.jar
+[2015-04-16 13:02:35,092]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: pagination-4.2.0 - file:/Users/sampathliyanage/.m2/repository/org/wso2/carbon/org.wso2.carbon.registry.server/4.2.0/org.wso2.carbon.registry.server-4.2.0.jar
+[2015-04-16 13:02:35,197]  INFO {org.wso2.carbon.automation.api.clients.user.mgt.UserManagementClient} -  Role name testRole already exists
+[2015-04-16 13:02:35,248]  INFO {org.wso2.carbon.automation.api.clients.user.mgt.UserManagementClient} -  User name adminuser already exists
+[2015-04-16 13:02:35,280]  INFO {org.wso2.carbon.automation.api.clients.user.mgt.UserManagementClient} -  User name testuser2 already exists
+[2015-04-16 13:02:35,315]  INFO {org.wso2.carbon.automation.api.clients.user.mgt.UserManagementClient} -  User name testuser3 already exists
+[2015-04-16 13:02:35,356]  INFO {org.wso2.carbon.automation.api.clients.user.mgt.UserManagementClient} -  User name testuser4 already exists
+[2015-04-16 13:02:35,399]  INFO {org.wso2.carbon.automation.api.clients.user.mgt.UserManagementClient} -  User name testuser5 already exists
+[2015-04-16 13:02:35,435]  INFO {org.wso2.carbon.automation.api.clients.user.mgt.UserManagementClient} -  User name testuser6 already exists
+[2015-04-16 13:02:35,474]  INFO {org.wso2.carbon.automation.api.clients.user.mgt.UserManagementClient} -  User name testuser7 already exists
+[2015-04-16 13:02:35,504]  INFO {org.wso2.carbon.automation.api.clients.user.mgt.UserManagementClient} -  User name testuser8 already exists
+[2015-04-16 13:02:35,540]  INFO {org.wso2.carbon.automation.api.clients.user.mgt.UserManagementClient} -  User name testuser9 already exists
+[2015-04-16 13:02:35,570]  INFO {org.wso2.carbon.automation.api.clients.user.mgt.UserManagementClient} -  User name testuser10 already exists
+[2015-04-16 13:02:35,597]  INFO {org.wso2.carbon.automation.api.clients.user.mgt.UserManagementClient} -  User name testuser11 already exists
+[2015-04-16 13:02:35,624]  INFO {org.wso2.carbon.automation.api.clients.user.mgt.UserManagementClient} -  User name testuser12 already exists
+[2015-04-16 13:02:35,659]  INFO {org.wso2.carbon.automation.api.clients.user.mgt.UserManagementClient} -  User name testuser13 already exists
+[2015-04-16 13:02:35,691]  INFO {org.wso2.carbon.automation.api.clients.user.mgt.UserManagementClient} -  User name testuser14 already exists
+[2015-04-16 13:02:35,723]  INFO {org.wso2.carbon.automation.api.clients.user.mgt.UserManagementClient} -  User name testuser15 already exists
+[2015-04-16 13:02:35,723]  INFO {org.wso2.carbon.automation.core.PlatformTestManager} -  --------------Start executing test class ChargeBee-Connector-Test on suiteESBTestSuite--------
+[2015-04-16 13:02:35,780]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: wso2caching-4.2.0 - file:/Users/sampathliyanage/.m2/repository/org/wso2/carbon/org.wso2.carbon.caching.core/4.2.0/org.wso2.carbon.caching.core-4.2.0.jar
+[2015-04-16 13:02:35,780]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: wso2caching-4.2.0 - file:/Users/sampathliyanage/.m2/repository/org/wso2/carbon/org.wso2.carbon.caching.core/4.2.0/org.wso2.carbon.caching.core-4.2.0.jar
+[2015-04-16 13:02:35,784]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: ComponentMgtModule-4.2.0 - file:/Users/sampathliyanage/.m2/repository/org/wso2/carbon/org.wso2.carbon.feature.mgt.services/4.2.0/org.wso2.carbon.feature.mgt.services-4.2.0.jar
+[2015-04-16 13:02:35,784]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: ComponentMgtModule-4.2.0 - file:/Users/sampathliyanage/.m2/repository/org/wso2/carbon/org.wso2.carbon.feature.mgt.services/4.2.0/org.wso2.carbon.feature.mgt.services-4.2.0.jar
+[2015-04-16 13:02:35,792]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: rampart - file:/Users/sampathliyanage/.m2/repository/org/apache/rampart/wso2/rampart-core/1.6.1.wso2v9/rampart-core-1.6.1.wso2v9.jar
+[2015-04-16 13:02:35,792]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: rampart - file:/Users/sampathliyanage/.m2/repository/org/apache/rampart/wso2/rampart-core/1.6.1.wso2v9/rampart-core-1.6.1.wso2v9.jar
+[2015-04-16 13:02:35,801]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: rahas - file:/Users/sampathliyanage/.m2/repository/org/apache/rampart/wso2/rampart-trust/1.6.1.wso2v9/rampart-trust-1.6.1.wso2v9.jar
+[2015-04-16 13:02:35,801]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: rahas - file:/Users/sampathliyanage/.m2/repository/org/apache/rampart/wso2/rampart-trust/1.6.1.wso2v9/rampart-trust-1.6.1.wso2v9.jar
+[2015-04-16 13:02:35,812]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: uddiversionmodule-4.2.0 - file:/Users/sampathliyanage/.m2/repository/org/wso2/carbon/org.wso2.carbon.registry.uddi/4.2.0/org.wso2.carbon.registry.uddi-4.2.0.jar
+[2015-04-16 13:02:35,812]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: uddiversionmodule-4.2.0 - file:/Users/sampathliyanage/.m2/repository/org/wso2/carbon/org.wso2.carbon.registry.uddi/4.2.0/org.wso2.carbon.registry.uddi-4.2.0.jar
+[2015-04-16 13:02:35,815]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: pagination-4.2.0 - file:/Users/sampathliyanage/.m2/repository/org/wso2/carbon/org.wso2.carbon.registry.server/4.2.0/org.wso2.carbon.registry.server-4.2.0.jar
+[2015-04-16 13:02:35,815]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: pagination-4.2.0 - file:/Users/sampathliyanage/.m2/repository/org/wso2/carbon/org.wso2.carbon.registry.server/4.2.0/org.wso2.carbon.registry.server-4.2.0.jar
+[2015-04-16 13:02:35,842]  INFO {org.wso2.carbon.automation.api.clients.authenticators.AuthenticatorClient} -  Login Successful
+[2015-04-16 13:02:35,878]  INFO {org.apache.axis2.deployment.DeploymentEngine} -  No services directory was found under /Users/sampathliyanage/Documents/ChargeBee-Scenario/ChargeBee/chargebee-connector/chargebee-connector-1.0.0/org.wso2.carbon.connector/src/test/resources/client.
+[2015-04-16 13:02:35,878]  INFO {org.apache.axis2.deployment.DeploymentEngine} -  No services directory was found under /Users/sampathliyanage/Documents/ChargeBee-Scenario/ChargeBee/chargebee-connector/chargebee-connector-1.0.0/org.wso2.carbon.connector/src/test/resources/client.
+[2015-04-16 13:02:35,902]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: addressing-1.6.1-wso2v10 - file:/Users/sampathliyanage/Documents/ChargeBee-Scenario/ChargeBee/chargebee-connector/chargebee-connector-1.0.0/org.wso2.carbon.connector/src/test/resources/client/modules/addressing-1.6.1-wso2v10.mar
+[2015-04-16 13:02:35,902]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: addressing-1.6.1-wso2v10 - file:/Users/sampathliyanage/Documents/ChargeBee-Scenario/ChargeBee/chargebee-connector/chargebee-connector-1.0.0/org.wso2.carbon.connector/src/test/resources/client/modules/addressing-1.6.1-wso2v10.mar
+[2015-04-16 13:02:35,908]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: rampart-1.6.1-wso2v8 - file:/Users/sampathliyanage/Documents/ChargeBee-Scenario/ChargeBee/chargebee-connector/chargebee-connector-1.0.0/org.wso2.carbon.connector/src/test/resources/client/modules/rampart-1.6.1-wso2v8.mar
+[2015-04-16 13:02:35,908]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: rampart-1.6.1-wso2v8 - file:/Users/sampathliyanage/Documents/ChargeBee-Scenario/ChargeBee/chargebee-connector/chargebee-connector-1.0.0/org.wso2.carbon.connector/src/test/resources/client/modules/rampart-1.6.1-wso2v8.mar
+[2015-04-16 13:02:35,924]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: wso2caching-4.2.0 - file:/Users/sampathliyanage/.m2/repository/org/wso2/carbon/org.wso2.carbon.caching.core/4.2.0/org.wso2.carbon.caching.core-4.2.0.jar
+[2015-04-16 13:02:35,924]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: wso2caching-4.2.0 - file:/Users/sampathliyanage/.m2/repository/org/wso2/carbon/org.wso2.carbon.caching.core/4.2.0/org.wso2.carbon.caching.core-4.2.0.jar
+[2015-04-16 13:02:35,927]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: ComponentMgtModule-4.2.0 - file:/Users/sampathliyanage/.m2/repository/org/wso2/carbon/org.wso2.carbon.feature.mgt.services/4.2.0/org.wso2.carbon.feature.mgt.services-4.2.0.jar
+[2015-04-16 13:02:35,927]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: ComponentMgtModule-4.2.0 - file:/Users/sampathliyanage/.m2/repository/org/wso2/carbon/org.wso2.carbon.feature.mgt.services/4.2.0/org.wso2.carbon.feature.mgt.services-4.2.0.jar
+[2015-04-16 13:02:35,939]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: rampart - file:/Users/sampathliyanage/.m2/repository/org/apache/rampart/wso2/rampart-core/1.6.1.wso2v9/rampart-core-1.6.1.wso2v9.jar
+[2015-04-16 13:02:35,939]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: rampart - file:/Users/sampathliyanage/.m2/repository/org/apache/rampart/wso2/rampart-core/1.6.1.wso2v9/rampart-core-1.6.1.wso2v9.jar
+[2015-04-16 13:02:35,948]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: rahas - file:/Users/sampathliyanage/.m2/repository/org/apache/rampart/wso2/rampart-trust/1.6.1.wso2v9/rampart-trust-1.6.1.wso2v9.jar
+[2015-04-16 13:02:35,948]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: rahas - file:/Users/sampathliyanage/.m2/repository/org/apache/rampart/wso2/rampart-trust/1.6.1.wso2v9/rampart-trust-1.6.1.wso2v9.jar
+[2015-04-16 13:02:35,961]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: uddiversionmodule-4.2.0 - file:/Users/sampathliyanage/.m2/repository/org/wso2/carbon/org.wso2.carbon.registry.uddi/4.2.0/org.wso2.carbon.registry.uddi-4.2.0.jar
+[2015-04-16 13:02:35,961]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: uddiversionmodule-4.2.0 - file:/Users/sampathliyanage/.m2/repository/org/wso2/carbon/org.wso2.carbon.registry.uddi/4.2.0/org.wso2.carbon.registry.uddi-4.2.0.jar
+[2015-04-16 13:02:35,963]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: pagination-4.2.0 - file:/Users/sampathliyanage/.m2/repository/org/wso2/carbon/org.wso2.carbon.registry.server/4.2.0/org.wso2.carbon.registry.server-4.2.0.jar
+[2015-04-16 13:02:35,963]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: pagination-4.2.0 - file:/Users/sampathliyanage/.m2/repository/org/wso2/carbon/org.wso2.carbon.registry.server/4.2.0/org.wso2.carbon.registry.server-4.2.0.jar
+[2015-04-16 13:02:36,038]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: wso2caching-4.2.0 - file:/Users/sampathliyanage/.m2/repository/org/wso2/carbon/org.wso2.carbon.caching.core/4.2.0/org.wso2.carbon.caching.core-4.2.0.jar
+[2015-04-16 13:02:36,038]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: wso2caching-4.2.0 - file:/Users/sampathliyanage/.m2/repository/org/wso2/carbon/org.wso2.carbon.caching.core/4.2.0/org.wso2.carbon.caching.core-4.2.0.jar
+[2015-04-16 13:02:36,042]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: ComponentMgtModule-4.2.0 - file:/Users/sampathliyanage/.m2/repository/org/wso2/carbon/org.wso2.carbon.feature.mgt.services/4.2.0/org.wso2.carbon.feature.mgt.services-4.2.0.jar
+[2015-04-16 13:02:36,042]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: ComponentMgtModule-4.2.0 - file:/Users/sampathliyanage/.m2/repository/org/wso2/carbon/org.wso2.carbon.feature.mgt.services/4.2.0/org.wso2.carbon.feature.mgt.services-4.2.0.jar
+[2015-04-16 13:02:36,050]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: rampart - file:/Users/sampathliyanage/.m2/repository/org/apache/rampart/wso2/rampart-core/1.6.1.wso2v9/rampart-core-1.6.1.wso2v9.jar
+[2015-04-16 13:02:36,050]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: rampart - file:/Users/sampathliyanage/.m2/repository/org/apache/rampart/wso2/rampart-core/1.6.1.wso2v9/rampart-core-1.6.1.wso2v9.jar
+[2015-04-16 13:02:36,060]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: rahas - file:/Users/sampathliyanage/.m2/repository/org/apache/rampart/wso2/rampart-trust/1.6.1.wso2v9/rampart-trust-1.6.1.wso2v9.jar
+[2015-04-16 13:02:36,060]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: rahas - file:/Users/sampathliyanage/.m2/repository/org/apache/rampart/wso2/rampart-trust/1.6.1.wso2v9/rampart-trust-1.6.1.wso2v9.jar
+[2015-04-16 13:02:36,070]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: uddiversionmodule-4.2.0 - file:/Users/sampathliyanage/.m2/repository/org/wso2/carbon/org.wso2.carbon.registry.uddi/4.2.0/org.wso2.carbon.registry.uddi-4.2.0.jar
+[2015-04-16 13:02:36,070]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: uddiversionmodule-4.2.0 - file:/Users/sampathliyanage/.m2/repository/org/wso2/carbon/org.wso2.carbon.registry.uddi/4.2.0/org.wso2.carbon.registry.uddi-4.2.0.jar
+[2015-04-16 13:02:36,074]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: pagination-4.2.0 - file:/Users/sampathliyanage/.m2/repository/org/wso2/carbon/org.wso2.carbon.registry.server/4.2.0/org.wso2.carbon.registry.server-4.2.0.jar
+[2015-04-16 13:02:36,074]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: pagination-4.2.0 - file:/Users/sampathliyanage/.m2/repository/org/wso2/carbon/org.wso2.carbon.registry.server/4.2.0/org.wso2.carbon.registry.server-4.2.0.jar
+[2015-04-16 13:02:36,118]  INFO {org.wso2.carbon.automation.core.PlatformTestManager} -  Running the test method --- org.wso2.carbon.connector.integration.test.chargebee.ChargebeeConnectorIntegrationTest.testCreateCouponWithMandatoryParameters ----
+[2015-04-16 13:02:39,901]  INFO {org.wso2.carbon.automation.core.PlatformTestManager} -  On test success..
+[2015-04-16 13:02:39,905]  INFO {org.wso2.carbon.automation.core.PlatformTestManager} -  Running the test method --- org.wso2.carbon.connector.integration.test.chargebee.ChargebeeConnectorIntegrationTest.testGetCouponWithMandatoryParameters ----
+[2015-04-16 13:02:40,515]  INFO {org.wso2.carbon.automation.core.PlatformTestManager} -  On test success..
+[2015-04-16 13:02:40,516]  INFO {org.wso2.carbon.automation.core.PlatformTestManager} -  Running the test method --- org.wso2.carbon.connector.integration.test.chargebee.ChargebeeConnectorIntegrationTest.testCreateCouponWithOptionalParameters ----
+[2015-04-16 13:02:41,339]  INFO {org.wso2.carbon.automation.core.PlatformTestManager} -  On test success..
+[2015-04-16 13:02:41,340]  INFO {org.wso2.carbon.automation.core.PlatformTestManager} -  Running the test method --- org.wso2.carbon.connector.integration.test.chargebee.ChargebeeConnectorIntegrationTest.testCreateCouponWithNegativeCase ----
+[2015-04-16 13:02:42,111]  INFO {org.wso2.carbon.automation.core.PlatformTestManager} -  On test success..
+PASSED: testCreateCouponWithMandatoryParameters
+        chargebee {createCoupon} integration test with mandatory parameters.
+PASSED: testGetCouponWithMandatoryParameters
+        chargebee {getCoupon} integration test with mandatory parameters.
+PASSED: testCreateCouponWithOptionalParameters
+        chargebee {createCoupon} integration test with optional parameters.
+PASSED: testCreateCouponWithNegativeCase
+        chargebee {createUser} integration test with negative case.
+
+===============================================
+    ChargeBee-Connector-Test
+    Tests run: 4, Failures: 0, Skips: 0
+===============================================
+
+[2015-04-16 13:02:42,127]  INFO {org.wso2.carbon.automation.core.PlatformTestManager} -  --------------Finishing executing test class ChargeBee-Connector-Test on suiteESBTestSuite--------
+[2015-04-16 13:02:42,136]  INFO {org.wso2.carbon.automation.core.PlatformSuiteManager} -  ***********Finishing executing test Suite ESBTestSuite on user*******
+[2015-04-16 13:02:42,136]  INFO {org.wso2.carbon.automation.core.PlatformExecutionManager} -  ---------------Test Execution Finished --------------------------
+[TestNG] Time taken by org.testng.reporters.XMLReporter@200e5602: 19 ms
+[TestNG] Time taken by [TestListenerAdapter] Passed:0 Failed:0 Skipped:0]: 0 ms
+[2015-04-16 13:02:42,168]  INFO {org.wso2.carbon.automation.core.PlatformReportManager} -  ----/Users/sampathliyanage/Documents/ChargeBee-Scenario/ChargeBee/chargebee-connector/chargebee-connector-1.0.0/org.wso2.carbon.connector/target/surefire-reports/ESBTestSuite---------
+[TestNG] Time taken by org.wso2.carbon.automation.core.PlatformReportManager@14377358: 23 ms
+[TestNG] Time taken by org.testng.reporters.EmailableReporter@2a866463: 3 ms
+[TestNG] Time taken by org.testng.reporters.JUnitReportReporter@75ba8574: 3 ms
+[TestNG] Time taken by org.testng.reporters.SuiteHTMLReporter@5f937246: 16 ms
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.517 sec
+
+Results :
+
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ org.wso2.carbon.connector.chargebee ---
+[INFO] Building jar: /Users/sampathliyanage/Documents/ChargeBee-Scenario/ChargeBee/chargebee-connector/chargebee-connector-1.0.0/org.wso2.carbon.connector/target/org.wso2.carbon.connector.chargebee-1.0.0.jar
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:test-jar (default) @ org.wso2.carbon.connector.chargebee ---
+[INFO] Building jar: /Users/sampathliyanage/Documents/ChargeBee-Scenario/ChargeBee/chargebee-connector/chargebee-connector-1.0.0/org.wso2.carbon.connector/target/org.wso2.carbon.connector.chargebee-1.0.0-tests.jar
+[INFO] 
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ org.wso2.carbon.connector.chargebee ---
+[INFO] Installing /Users/sampathliyanage/Documents/ChargeBee-Scenario/ChargeBee/chargebee-connector/chargebee-connector-1.0.0/org.wso2.carbon.connector/target/org.wso2.carbon.connector.chargebee-1.0.0.jar to /Users/sampathliyanage/.m2/repository/org/wso2/carbon/connector/org.wso2.carbon.connector.chargebee/1.0.0/org.wso2.carbon.connector.chargebee-1.0.0.jar
+[INFO] Installing /Users/sampathliyanage/Documents/ChargeBee-Scenario/ChargeBee/chargebee-connector/chargebee-connector-1.0.0/org.wso2.carbon.connector/pom.xml to /Users/sampathliyanage/.m2/repository/org/wso2/carbon/connector/org.wso2.carbon.connector.chargebee/1.0.0/org.wso2.carbon.connector.chargebee-1.0.0.pom
+[INFO] Installing /Users/sampathliyanage/Documents/ChargeBee-Scenario/ChargeBee/chargebee-connector/chargebee-connector-1.0.0/org.wso2.carbon.connector/target/chargebee-connector-1.0.0.zip to /Users/sampathliyanage/.m2/repository/org/wso2/carbon/connector/org.wso2.carbon.connector.chargebee/1.0.0/org.wso2.carbon.connector.chargebee-1.0.0.zip
+[INFO] Installing /Users/sampathliyanage/Documents/ChargeBee-Scenario/ChargeBee/chargebee-connector/chargebee-connector-1.0.0/org.wso2.carbon.connector/target/org.wso2.carbon.connector.chargebee-1.0.0-tests.jar to /Users/sampathliyanage/.m2/repository/org/wso2/carbon/connector/org.wso2.carbon.connector.chargebee/1.0.0/org.wso2.carbon.connector.chargebee-1.0.0-tests.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 27.641 s
+[INFO] Finished at: 2015-04-16T13:02:43+05:30
+[INFO] Final Memory: 68M/381M
+[INFO] ------------------------------------------------------------------------

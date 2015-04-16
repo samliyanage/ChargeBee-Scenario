@@ -14,6 +14,7 @@
          <property name="invoiceNotes" expression="json-eval($.invoiceNotes)" />
          <property name="validTill" expression="json-eval($.validTill)" />
          <property name="durationType" expression="json-eval($.durationType)" />
+         <property name="maxRedemptions" expression="json-eval($.maxRedemptions)" />
          <chargebee.init>
             <apiUrl>{$ctx:apiUrl}</apiUrl>
             <apiKey>{$ctx:apiKey}</apiKey>
@@ -30,7 +31,19 @@
                   <invoiceNotes>{$ctx:invoiceNotes}</invoiceNotes>
                   <validTill>{$ctx:validTill}</validTill>
                   <durationType>{$ctx:durationType}</durationType>
+                  <maxRedemptions>{$ctx:maxRedemptions}</maxRedemptions>
                </chargebee.createCoupon>
+            </case>
+            <case regex="urn:getCoupon">
+               <chargebee.getCoupon>
+                  <couponId>{$ctx:couponId}</couponId>
+               </chargebee.getCoupon>
+            </case>
+            <case>
+               <chargebee.listCoupons>
+                  <limit>{$ctx:limit}</limit>
+                  <offset>{$ctx:offset}</offset>
+               </chargebee.listCoupons>
             </case>
          </switch>
          <respond />

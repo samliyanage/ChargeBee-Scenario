@@ -1,10 +1,12 @@
 {
-    "apiUrl": "",
-    "apiKey": "",
-    "couponId": "",
-    "couponName": "",
+    "apiUrl": "%s(apiUrl)",
+    "apiKey": "%s(apiKey)",
+    "couponId": "%s(couponIdMand)",
+    "couponName": "%s(couponNameMand)",
     "discountType": "fixed_amount",
-    "applyOn": "each_specified_item",
-    "discountAmount": ""
+    "applyOn": "invoice_amount",
+    "discountAmount": "%s(discountAmount)",
+    "durationType":"%s(durationType)",
+    "maxRedemptions":"%s(maxRedemptions)"
     
 }
