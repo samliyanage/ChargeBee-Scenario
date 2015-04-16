@@ -54,9 +54,10 @@ public class ChargebeeConnectorIntegrationTest extends ConnectorIntegrationTestB
         final String authString = connectorProperties.getProperty("apiKey") + ":";
         final String base64AuthString = Base64.encode(authString.getBytes());
         
-        apiRequestHeadersMap.put("Authorization", "Basic " + base64AuthString);
-        
         apiRequestHeadersMap.putAll(esbRequestHeadersMap);
+        apiRequestHeadersMap.put("Authorization", "Basic " + base64AuthString);
+        apiRequestHeadersMap.put("Content-Type", "application/x-www-form-urlencoded");
+        
         
         apiUrl = connectorProperties.getProperty("apiUrl") + "/api/v1";
         
@@ -65,6 +66,11 @@ public class ChargebeeConnectorIntegrationTest extends ConnectorIntegrationTestB
     
     /**
      * Positive test case for createCoupon method with mandatory parameters.
+     * 
+	 * @throws IOException
+	 *             Signals that an I/O exception has occurred.
+	 * @throws JSONException
+	 *             if JSON exception occurred.            
      */
     @Test(groups = { "wso2.esb" }, description = "chargebee {createCoupon} integration test with mandatory parameters.")
     public void testCreateCouponWithMandatoryParameters() throws IOException, JSONException {
@@ -90,6 +96,11 @@ public class ChargebeeConnectorIntegrationTest extends ConnectorIntegrationTestB
     
     /**
      * Positive test case for createCoupon method with optional parameters.
+     * 
+     * * @throws IOException
+	 *             Signals that an I/O exception has occurred.
+	 * @throws JSONException
+	 *             if JSON exception occurred.     
      */
     @Test(groups = { "wso2.esb" }, description = "chargebee {createCoupon} integration test with optional parameters.")
     public void testCreateCouponWithOptionalParameters() throws IOException, JSONException {
@@ -114,6 +125,11 @@ public class ChargebeeConnectorIntegrationTest extends ConnectorIntegrationTestB
     
     /**
      * Negative test case for createCoupon method.
+     * 
+     * @throws IOException
+	 *             Signals that an I/O exception has occurred.
+	 * @throws JSONException
+	 *             if JSON exception occurred.     
      */
     @Test(groups = { "wso2.esb" }, description = "chargebee {createCoupon} integration test with negative case.")
     public void testCreateCouponWithNegativeCase() throws IOException, JSONException {
@@ -125,9 +141,9 @@ public class ChargebeeConnectorIntegrationTest extends ConnectorIntegrationTestB
        
        Assert.assertEquals(esbRestResponse.getHttpStatusCode(), 400);
        
-       final String apiEndPoint = apiUrl + "/coupons?id=&apply_on=&discount_type=&name=";
+       final String apiEndPoint = apiUrl + "/coupons";
        final RestResponse<JSONObject> apiRestResponse =
-             sendJsonRestRequest(apiEndPoint, "POST", apiRequestHeadersMap);
+             sendJsonRestRequest(apiEndPoint, "POST", apiRequestHeadersMap, "api_createCoupon_negative.json");
        
        Assert.assertEquals(apiRestResponse.getHttpStatusCode(), 400);
        Assert.assertEquals(esbRestResponse.getBody().getString("error_code"), apiRestResponse.getBody().getString("error_code"));
@@ -138,6 +154,11 @@ public class ChargebeeConnectorIntegrationTest extends ConnectorIntegrationTestB
     
     /**
      * Positive test case for getCoupon method with mandatory parameters.
+     * 
+     * @throws IOException
+	 *             Signals that an I/O exception has occurred.
+	 * @throws JSONException
+	 *             if JSON exception occurred.     
      */
     @Test(groups = { "wso2.esb" }, dependsOnMethods = { "testCreateCouponWithMandatoryParameters" }, description = "chargebee {getCoupon} integration test with mandatory parameters.")
     public void testGetCouponWithMandatoryParameters() throws IOException, JSONException {
@@ -166,7 +187,36 @@ public class ChargebeeConnectorIntegrationTest extends ConnectorIntegrationTestB
     }
     
     /**
+	 * Negative test case for getCoupon method.
+	 * 
+	 * @throws IOException
+	 *             Signals that an I/O exception has occurred.
+	 * @throws JSONException
+	 *             if JSON exception occurred.
+	 */
+	@Test(groups = { "wso2.esb" }, description = "chargebee {getCoupon} integration test with negative case.")
+	public void testgetCouponWithNegativeCase() throws IOException, JSONException {
+
+		esbRequestHeadersMap.put("Action", "urn:getCoupon");
+		RestResponse<JSONObject> esbRestResponse = sendJsonRestRequest(proxyUrl, "POST", esbRequestHeadersMap,
+		        "esb_getCoupon_negative.json");
+		Assert.assertEquals(esbRestResponse.getHttpStatusCode(), 404);
+
+		String apiEndPoint = apiUrl + "/coupons/INVALID";
+		RestResponse<JSONObject> apiRestResponse = sendJsonRestRequest(apiEndPoint, "GET", apiRequestHeadersMap);
+
+		Assert.assertEquals(esbRestResponse.getBody().getString("error_code"), apiRestResponse.getBody().getString("error_code"));
+	    Assert.assertEquals(esbRestResponse.getBody().getString("error_msg"), apiRestResponse.getBody().getString("error_msg"));
+	    Assert.assertEquals(esbRestResponse.getBody().getString("message"), apiRestResponse.getBody().getString("message"));
+	}
+    
+    /**
      * Positive test case for listCoupons method with mandatory parameters.
+     * 
+     * @throws IOException
+	 *             Signals that an I/O exception has occurred.
+	 * @throws JSONException
+	 *             if JSON exception occurred.     
      */
     @Test(groups = { "wso2.esb" }, dependsOnMethods = { "testCreateCouponWithMandatoryParameters","testCreateCouponWithOptionalParameters" }, description = "chargebee {listCoupons} integration test with mandatory parameters.")
     public void testListCouponsWithMandatoryParameters() throws IOException, JSONException {
@@ -200,6 +250,11 @@ public class ChargebeeConnectorIntegrationTest extends ConnectorIntegrationTestB
     
     /**
      * Positive test case for listCoupons method with optional parameters.
+     * 
+     * @throws IOException
+	 *             Signals that an I/O exception has occurred.
+	 * @throws JSONException
+	 *             if JSON exception occurred.     
      */
     @Test(groups = { "wso2.esb" }, dependsOnMethods = { "testCreateCouponWithMandatoryParameters","testCreateCouponWithOptionalParameters" }, description = "chargebee {listCoupons} integration test with optional parameters.")
     public void testListCouponsWithOptionalParameters() throws IOException, JSONException {
@@ -232,6 +287,11 @@ public class ChargebeeConnectorIntegrationTest extends ConnectorIntegrationTestB
     
     /**
      * Negative test case for listCoupons method.
+     * 
+     * @throws IOException
+	 *             Signals that an I/O exception has occurred.
+	 * @throws JSONException
+	 *             if JSON exception occurred.     
      */
     @Test(groups = { "wso2.esb" }, description = "chargebee {listCoupons} integration test with negative case.")
     public void testListCouponsWithNegativeCase() throws IOException, JSONException {
