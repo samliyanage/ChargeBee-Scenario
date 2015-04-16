@@ -16,7 +16,6 @@
          <property name="durationType" expression="json-eval($.durationType)" />
          <property name="maxRedemptions" expression="json-eval($.maxRedemptions)" />
          <property name="limit" expression="json-eval($.limit)" />
-         <property name="offset" expression="json-eval($.offset)" />
          <chargebee.init>
             <apiUrl>{$ctx:apiUrl}</apiUrl>
             <apiKey>{$ctx:apiKey}</apiKey>
@@ -44,7 +43,6 @@
             <case regex="urn:listCoupons">
                <chargebee.listCoupons>
                   <limit>{$ctx:limit}</limit>
-                  <offset>{$ctx:offset}</offset>
                </chargebee.listCoupons>
             </case>
          </switch>

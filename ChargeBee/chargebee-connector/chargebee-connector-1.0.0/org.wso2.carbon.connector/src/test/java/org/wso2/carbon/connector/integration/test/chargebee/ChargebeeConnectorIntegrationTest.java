@@ -22,7 +22,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.apache.axiom.om.util.Base64;
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.testng.Assert;
@@ -116,7 +115,7 @@ public class ChargebeeConnectorIntegrationTest extends ConnectorIntegrationTestB
     /**
      * Negative test case for createCoupon method.
      */
-    @Test(groups = { "wso2.esb" }, description = "chargebee {createUser} integration test with negative case.")
+    @Test(groups = { "wso2.esb" }, description = "chargebee {createCoupon} integration test with negative case.")
     public void testCreateCouponWithNegativeCase() throws IOException, JSONException {
     
        esbRequestHeadersMap.put("Action", "urn:createCoupon");
@@ -197,6 +196,62 @@ public class ChargebeeConnectorIntegrationTest extends ConnectorIntegrationTestB
        Assert.assertEquals(esbResponseObjectOne.getString("discount_type"), apiResponseObjectOne.getString("discount_type"));
        Assert.assertEquals(esbResponseObjectOne.getString("apply_on"), apiResponseObjectOne.getString("apply_on"));
        Assert.assertEquals(esbResponseObjectOne.getString("created_at"), apiResponseObjectOne.getString("created_at"));
+    }
+    
+    /**
+     * Positive test case for listCoupons method with optional parameters.
+     */
+    @Test(groups = { "wso2.esb" }, dependsOnMethods = { "testCreateCouponWithMandatoryParameters","testCreateCouponWithOptionalParameters" }, description = "chargebee {listCoupons} integration test with optional parameters.")
+    public void testListCouponsWithOptionalParameters() throws IOException, JSONException {
+    
+       esbRequestHeadersMap.put("Action", "urn:listCoupons");
+       
+       final RestResponse<JSONObject> esbRestResponse =
+             sendJsonRestRequest(proxyUrl, "POST", esbRequestHeadersMap, "esb_listCoupons_optional.json");
+       
+       Assert.assertEquals(esbRestResponse.getHttpStatusCode(), 200);
+       
+       int esbResponseArrayLength= esbRestResponse.getBody().getJSONArray("list").length();
+       
+       String apiEndPoint = apiUrl + "/coupons";
+       RestResponse<JSONObject> apiRestResponse = sendJsonRestRequest(apiEndPoint, "GET", apiRequestHeadersMap);
+       
+       Assert.assertEquals(apiRestResponse.getHttpStatusCode(), 200);
+       
+       int apiResponseArrayLength= apiRestResponse.getBody().getJSONArray("list").length();
+       
+       Assert.assertNotEquals(esbResponseArrayLength, apiResponseArrayLength);
+       
+       apiEndPoint = apiUrl + "/coupons?limit=1";
+       apiRestResponse = sendJsonRestRequest(apiEndPoint, "GET", apiRequestHeadersMap);
+       apiResponseArrayLength= apiRestResponse.getBody().getJSONArray("list").length();
+       
+       Assert.assertEquals(esbResponseArrayLength, apiResponseArrayLength);
+   
+    }
+    
+    /**
+     * Negative test case for listCoupons method.
+     */
+    @Test(groups = { "wso2.esb" }, description = "chargebee {listCoupons} integration test with negative case.")
+    public void testListCouponsWithNegativeCase() throws IOException, JSONException {
+    
+       esbRequestHeadersMap.put("Action", "urn:listCoupons");
+       
+       final RestResponse<JSONObject> esbRestResponse =
+             sendJsonRestRequest(proxyUrl, "POST", esbRequestHeadersMap, "esb_listCoupons_negative.json");
+       
+       Assert.assertEquals(esbRestResponse.getHttpStatusCode(), 400);
+       
+       final String apiEndPoint = apiUrl + "/coupons?limit=INVALID";
+       final RestResponse<JSONObject> apiRestResponse =
+             sendJsonRestRequest(apiEndPoint, "GET", apiRequestHeadersMap);
+       
+       Assert.assertEquals(apiRestResponse.getHttpStatusCode(), 400);
+       Assert.assertEquals(esbRestResponse.getBody().getString("error_code"), apiRestResponse.getBody().getString("error_code"));
+       Assert.assertEquals(esbRestResponse.getBody().getString("error_msg"), apiRestResponse.getBody().getString("error_msg"));
+       Assert.assertEquals(esbRestResponse.getBody().getString("error_param"), apiRestResponse.getBody().getString("error_param"));
+       Assert.assertEquals(esbRestResponse.getBody().getString("message"), apiRestResponse.getBody().getString("message"));
     }
   
 }
