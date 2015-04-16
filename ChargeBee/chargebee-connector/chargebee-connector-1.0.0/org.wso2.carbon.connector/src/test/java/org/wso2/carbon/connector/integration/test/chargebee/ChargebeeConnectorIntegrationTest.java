@@ -22,6 +22,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.apache.axiom.om.util.Base64;
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.testng.Assert;
@@ -165,5 +166,37 @@ public class ChargebeeConnectorIntegrationTest extends ConnectorIntegrationTestB
        Assert.assertEquals(esbResponseObject.getLong("created_at"), apiResponseObject.getLong("created_at"));
     }
     
+    /**
+     * Positive test case for listCoupons method with mandatory parameters.
+     */
+    @Test(groups = { "wso2.esb" }, dependsOnMethods = { "testCreateCouponWithMandatoryParameters","testCreateCouponWithOptionalParameters" }, description = "chargebee {listCoupons} integration test with mandatory parameters.")
+    public void testListCouponsWithMandatoryParameters() throws IOException, JSONException {
+    
+       esbRequestHeadersMap.put("Action", "urn:listCoupons");
+       
+       final RestResponse<JSONObject> esbRestResponse =
+             sendJsonRestRequest(proxyUrl, "POST", esbRequestHeadersMap, "esb_listCoupons_mandatory.json");
+       
+       Assert.assertEquals(esbRestResponse.getHttpStatusCode(), 200);
+       
+       final int esbResponseArrayLength= esbRestResponse.getBody().getJSONArray("list").length();
+       final JSONObject esbResponseObjectOne=esbRestResponse.getBody().getJSONArray("list").getJSONObject(0).getJSONObject("coupon");
+       
+       final String apiEndPoint = apiUrl + "/coupons";
+       final RestResponse<JSONObject> apiRestResponse = sendJsonRestRequest(apiEndPoint, "GET", apiRequestHeadersMap);
+       
+       Assert.assertEquals(apiRestResponse.getHttpStatusCode(), 200);
+       
+       final int apiResponseArrayLength= apiRestResponse.getBody().getJSONArray("list").length();
+       final JSONObject apiResponseObjectOne=apiRestResponse.getBody().getJSONArray("list").getJSONObject(0).getJSONObject("coupon");
+       
+       Assert.assertEquals(esbResponseArrayLength, apiResponseArrayLength);
+       
+       Assert.assertEquals(esbResponseObjectOne.getString("id"), apiResponseObjectOne.getString("id"));
+       Assert.assertEquals(esbResponseObjectOne.getString("name"), apiResponseObjectOne.getString("name"));
+       Assert.assertEquals(esbResponseObjectOne.getString("discount_type"), apiResponseObjectOne.getString("discount_type"));
+       Assert.assertEquals(esbResponseObjectOne.getString("apply_on"), apiResponseObjectOne.getString("apply_on"));
+       Assert.assertEquals(esbResponseObjectOne.getString("created_at"), apiResponseObjectOne.getString("created_at"));
+    }
   
 }

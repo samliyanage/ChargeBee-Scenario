@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite hostname="Sampaths-MacBook-Air.local" name="org.wso2.carbon.connector.integration.test.chargebee.ChargebeeConnectorIntegrationTest" tests="4" failures="0" timestamp="16 Apr 2015 07:32:42 GMT" time="6.39" errors="0">
-  <testcase name="testCreateCouponWithMandatoryParameters" time="3.784" classname="org.wso2.carbon.connector.integration.test.chargebee.ChargebeeConnectorIntegrationTest"/>
-  <testcase name="testGetCouponWithMandatoryParameters" time="0.61" classname="org.wso2.carbon.connector.integration.test.chargebee.ChargebeeConnectorIntegrationTest"/>
-  <testcase name="testCreateCouponWithOptionalParameters" time="0.823" classname="org.wso2.carbon.connector.integration.test.chargebee.ChargebeeConnectorIntegrationTest"/>
-  <testcase name="testCreateCouponWithNegativeCase" time="0.771" classname="org.wso2.carbon.connector.integration.test.chargebee.ChargebeeConnectorIntegrationTest"/>
-</testsuite>
