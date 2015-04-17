@@ -19,7 +19,7 @@
 <!-- API Doc: https://apidocs.chargebee.com/docs/api/coupons#list_coupons -->
 <template name="listCoupons" xmlns="http://ws.apache.org/ns/synapse">
    <parameter name="limit" description="Limits the number of resources to be returned." />
-   <parameter name="offset" description="Allows you to fetch the next set of resources." />
+   <parameter name="offset" description="Allows to fetch the next set of resources." />
    <sequence>
       <property name="uri.var.limit" expression="$func:limit" />
       <property name="uri.var.offset" expression="$func:offset" />

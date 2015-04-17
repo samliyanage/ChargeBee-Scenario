@@ -97,7 +97,7 @@ public class ChargebeeConnectorIntegrationTest extends ConnectorIntegrationTestB
     /**
      * Positive test case for createCoupon method with optional parameters.
      * 
-     * * @throws IOException
+     * @throws IOException
 	 *             Signals that an I/O exception has occurred.
 	 * @throws JSONException
 	 *             if JSON exception occurred.     

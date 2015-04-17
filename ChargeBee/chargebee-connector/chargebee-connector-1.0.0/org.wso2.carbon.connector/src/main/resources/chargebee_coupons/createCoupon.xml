@@ -25,15 +25,15 @@
    <parameter name="discountAmount" description="Discount value in cents." />
    <parameter name="discountPercentage" description="Discount value in percentage." />
    <parameter name="discountQuantity" description="Number of offered quantity for discount." />
-   <parameter name="applyOn" description="The invoice items for which this discounts need to be applied." />
+   <parameter name="applyOn" description="The invoice items for which the discounts need to be applied." />
    <parameter name="planConstraint" description="Plans the coupon can be applied to." />
    <parameter name="addonConstraint" description="Addons the coupon can be applied to." />
    <parameter name="planIds" description="List of IDs of the plans." />
    <parameter name="addonIds" description="List of IDs of the addons." />
-   <parameter name="durationType" description="Specifies the time duration this coupon is applicable." />
+   <parameter name="durationType" description="Specifies the time duration the coupon is applicable." />
    <parameter name="durationMonth" description="The duration in months for the coupon to be applied." />
    <parameter name="validTill" description="Date upto which the coupon can be applied to new subscriptions." />
-   <parameter name="maxRedemptions" description="Maximum number of times this coupon can be redeemed." />
+   <parameter name="maxRedemptions" description="Maximum number of times the coupon can be redeemed." />
    <parameter name="invoiceNotes" description="Invoice Notes for the coupon." />
    <sequence>
       <property name="uri.var.couponId" expression="$func:couponId" />

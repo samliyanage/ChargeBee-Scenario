@@ -18,7 +18,7 @@
 -->
 <!-- API Doc: https://apidocs.chargebee.com/docs/api/coupons#retrieve_a_coupon -->
 <template name="getCoupon" xmlns="http://ws.apache.org/ns/synapse">
-   <parameter name="couponId" description="The Id of the coupon." />
+   <parameter name="couponId" description="ID of the coupon." />
    <sequence>
       <property name="uri.var.couponId" expression="$func:couponId" />
       <call>
